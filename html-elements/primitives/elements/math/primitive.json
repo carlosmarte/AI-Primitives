@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.math",
+  "kind": "element",
+  "name": "math",
+  "tag": "<math>",
+  "title": "math — MathML root",
+  "description": "MathML root",
+  "group": {
+    "id": "embedded",
+    "title": "Embedded content"
+  },
+  "dom": {
+    "interface": "Element",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1998/Math/MathML"
+  },
+  "content_categories": {
+    "always": [
+      "Flow",
+      "Phrasing",
+      "Embedded",
+      "Palpable"
+    ],
+    "conditional": {},
+    "all": [
+      "Flow",
+      "Phrasing",
+      "Embedded",
+      "Palpable"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "foreign",
+    "start_tag": "required",
+    "end_tag": "required",
+    "self_closing_start_tag_allowed": true,
+    "children": "foreign",
+    "children_note": "Foreign element: contents follow the SVG or MathML specification. Self-closing start tags are honoured inside foreign content."
+  },
+  "placement": {
+    "parent_requirement": null,
+    "parents": [],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [],
+  "flags": [
+    {
+      "issue": "Defined by the SVG and MathML specs, not HTML; categories come from the HTML element index.",
+      "resolution": "Included as foreign elements.",
+      "source": "SPEC.md (enriched taxonomy flags)"
+    }
+  ],
+  "main_primitive": {
+    "slug": "span",
+    "is_main": false,
+    "elements": [
+      "span"
+    ],
+    "job": "generic-box",
+    "why": "Phrasing-level mathematical markup from another vocabulary.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<math>\n  <mi>x</mi><mo>=</mo><mn>2</mn>\n</math>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/https://w3c.github.io/mathml-core/#the-top-level-math-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Flow": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content",
+      "Embedded": "https://html.spec.whatwg.org/multipage/dom.html#embedded-content-2",
+      "Palpable": "https://html.spec.whatwg.org/multipage/dom.html#palpable-content"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

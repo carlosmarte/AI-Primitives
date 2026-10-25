@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "dom.node.processing-instruction",
+  "kind": "node",
+  "name": "ProcessingInstruction",
+  "slug": "processing-instruction",
+  "title": "ProcessingInstruction — nodeType 7",
+  "description": "XML serialization node; text/html does not serialize processing-instruction nodes. DOM APIs can create ProcessingInstruction objects even for an HTML document, so XML-only describes syntax use, not all possible API-created objects.",
+  "dom": {
+    "interface": "ProcessingInstruction",
+    "nodeType": 7,
+    "node_type_constant": "Node.PROCESSING_INSTRUCTION_NODE",
+    "applies_to": "XML (effectively)"
+  },
+  "content_categories": null,
+  "placement": {
+    "parent": "Document, Element, or DocumentFragment (XML documents)"
+  },
+  "serialization": {
+    "text_html": "Serialized as <?target data>. The text/html parser never produces one: <?...?> is parsed as a bogus Comment. The DOM API can still create one in an HTML document."
+  },
+  "creation": "document.createProcessingInstruction(target, data)",
+  "notes": [
+    {
+      "note": "The HTML parser turns <?...> into a Comment; the DOM API can still create one in an HTML document.",
+      "source": "SPEC.md (enriched taxonomy dom_node_types)"
+    }
+  ],
+  "example": "<?xml-stylesheet type=\"text/xsl\" href=\"style.xsl\"?>",
+  "spec": {
+    "node": "https://dom.spec.whatwg.org/#interface-node",
+    "dom_node_types": "https://dom.spec.whatwg.org/#node"
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "dom.interface",
+      "dom.nodeType",
+      "dom.applies_to",
+      "description",
+      "notes"
+    ],
+    "authored": [
+      "slug",
+      "dom.node_type_constant",
+      "content_categories",
+      "placement",
+      "serialization",
+      "creation",
+      "example"
+    ]
+  }
+}

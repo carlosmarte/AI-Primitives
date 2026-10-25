@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "dom.node.document",
+  "kind": "node",
+  "name": "Document",
+  "slug": "document",
+  "title": "Document — nodeType 9",
+  "description": "Document node.",
+  "dom": {
+    "interface": "Document",
+    "nodeType": 9,
+    "node_type_constant": "Node.DOCUMENT_NODE",
+    "applies_to": "HTML and XML"
+  },
+  "content_categories": null,
+  "placement": {
+    "parent": null
+  },
+  "serialization": {
+    "text_html": "Serialized as the concatenation of its children (DocumentType, then the root Element, plus any Comments)."
+  },
+  "creation": "document.implementation.createHTMLDocument(title) or DOMParser.parseFromString(html, \"text/html\")",
+  "notes": [
+    {
+      "note": "Root of the tree.",
+      "source": "SPEC.md (enriched taxonomy dom_node_types)"
+    }
+  ],
+  "example": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head><title>Page</title></head>\n  <body></body>\n</html>",
+  "spec": {
+    "node": "https://dom.spec.whatwg.org/#interface-node",
+    "dom_node_types": "https://dom.spec.whatwg.org/#node"
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "dom.interface",
+      "dom.nodeType",
+      "dom.applies_to",
+      "description",
+      "notes"
+    ],
+    "authored": [
+      "slug",
+      "dom.node_type_constant",
+      "content_categories",
+      "placement",
+      "serialization",
+      "creation",
+      "example"
+    ]
+  }
+}

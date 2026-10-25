@@ -1,0 +1,105 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.template",
+  "kind": "element",
+  "name": "template",
+  "tag": "<template>",
+  "title": "template — Template",
+  "description": "Template",
+  "group": {
+    "id": "scripting",
+    "title": "Scripting & components"
+  },
+  "dom": {
+    "interface": "HTMLTemplateElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [
+      "Metadata",
+      "Flow",
+      "Phrasing",
+      "Script-supporting"
+    ],
+    "conditional": {},
+    "all": [
+      "Metadata",
+      "Flow",
+      "Phrasing",
+      "Script-supporting"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "template",
+    "start_tag": "required",
+    "end_tag": "required",
+    "self_closing_start_tag_allowed": false,
+    "children": "template-contents",
+    "children_note": "Template element: parsed children are moved into a DocumentFragment (the template contents) owned by an inert document; they are not children of the element in the DOM."
+  },
+  "placement": {
+    "parent_requirement": null,
+    "parents": [],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [],
+  "flags": [],
+  "main_primitive": {
+    "slug": "template",
+    "is_main": true,
+    "elements": [
+      "template"
+    ],
+    "job": "code",
+    "why": "Inert markup to clone later.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<template id=\"row\">\n  <tr><td></td></tr>\n</template>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Metadata": "https://html.spec.whatwg.org/multipage/dom.html#metadata-content",
+      "Flow": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content",
+      "Script-supporting": "https://html.spec.whatwg.org/multipage/dom.html#script-supporting-elements"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

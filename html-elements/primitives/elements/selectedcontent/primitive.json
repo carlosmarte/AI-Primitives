@@ -1,0 +1,113 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.selectedcontent",
+  "kind": "element",
+  "name": "selectedcontent",
+  "tag": "<selectedcontent>",
+  "title": "selectedcontent — Mirrors content from an option",
+  "description": "Mirrors content from an option",
+  "group": {
+    "id": "forms",
+    "title": "Forms"
+  },
+  "dom": {
+    "interface": "HTMLSelectedContentElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [],
+    "conditional": {
+      "Phrasing": "descendant of a button that is a child of select"
+    },
+    "all": [
+      "Phrasing"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "normal",
+    "start_tag": "required",
+    "end_tag": "required",
+    "self_closing_start_tag_allowed": false,
+    "children": "normal",
+    "children_note": "Child content is governed by the element’s content model in its spec definition."
+  },
+  "placement": {
+    "parent_requirement": "Descendant of a button that is a child of select.",
+    "parents": [
+      "button"
+    ],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [
+    {
+      "note": "The normative Phrasing list makes membership conditional on being in a button in a select; its element definition says Phrasing without repeating the condition. The explicit category-list condition is retained.",
+      "source": "SPEC.md (primary taxonomy classification_note)"
+    },
+    {
+      "note": "Only valid inside the button of a customizable select.",
+      "source": "SPEC.md (enriched taxonomy notes)"
+    }
+  ],
+  "flags": [
+    {
+      "issue": "Element index lists categories 'none'; its definition and the category index say Phrasing content.",
+      "resolution": "Classified as Phrasing. Parent recorded from the element index (button, inside a customizable select).",
+      "source": "SPEC.md (enriched taxonomy flags)"
+    }
+  ],
+  "main_primitive": {
+    "slug": "select",
+    "is_main": false,
+    "elements": [
+      "select"
+    ],
+    "job": "input",
+    "why": "Mirror of the chosen option inside a customizable select.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<select>\n  <button><selectedcontent></selectedcontent></button>\n  <option>One</option>\n  <option>Two</option>\n</select>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

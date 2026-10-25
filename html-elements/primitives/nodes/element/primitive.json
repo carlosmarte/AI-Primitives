@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "dom.node.element",
+  "kind": "node",
+  "name": "Element",
+  "slug": "element",
+  "title": "Element — nodeType 1",
+  "description": "Element node, including HTML, SVG, and MathML elements.",
+  "dom": {
+    "interface": "Element",
+    "nodeType": 1,
+    "node_type_constant": "Node.ELEMENT_NODE",
+    "applies_to": "HTML and XML"
+  },
+  "content_categories": "Determined per element; see the 115 element primitives under primitives/elements/.",
+  "placement": {
+    "parent": "Document (root element), Element, or DocumentFragment"
+  },
+  "serialization": {
+    "text_html": "Serialized as a start tag with attributes, the serialized children (per the element’s syntax kind), and an end tag unless the element is void."
+  },
+  "creation": "document.createElement(localName) or document.createElementNS(namespace, qualifiedName)",
+  "notes": [
+    {
+      "note": "Every element in the taxonomy above.",
+      "source": "SPEC.md (enriched taxonomy dom_node_types)"
+    }
+  ],
+  "example": "<p class=\"lead\">Text</p>",
+  "spec": {
+    "node": "https://dom.spec.whatwg.org/#interface-node",
+    "dom_node_types": "https://dom.spec.whatwg.org/#node"
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "dom.interface",
+      "dom.nodeType",
+      "dom.applies_to",
+      "description",
+      "notes"
+    ],
+    "authored": [
+      "slug",
+      "dom.node_type_constant",
+      "content_categories",
+      "placement",
+      "serialization",
+      "creation",
+      "example"
+    ]
+  }
+}

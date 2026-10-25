@@ -1,0 +1,122 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.object",
+  "kind": "element",
+  "name": "object",
+  "tag": "<object>",
+  "title": "object — Image, child navigable , or plugin",
+  "description": "Image, child navigable , or plugin",
+  "group": {
+    "id": "embedded",
+    "title": "Embedded content"
+  },
+  "dom": {
+    "interface": "HTMLObjectElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [
+      "Flow",
+      "Phrasing",
+      "Embedded",
+      "Palpable"
+    ],
+    "conditional": {},
+    "all": [
+      "Flow",
+      "Phrasing",
+      "Embedded",
+      "Palpable"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": true,
+    "always": [
+      "listed"
+    ],
+    "conditional": {},
+    "all": [
+      "listed"
+    ]
+  },
+  "syntax": {
+    "kind": "normal",
+    "start_tag": "required",
+    "end_tag": "required",
+    "self_closing_start_tag_allowed": false,
+    "children": "normal",
+    "children_note": "Child content is governed by the element’s content model in its spec definition."
+  },
+  "placement": {
+    "parent_requirement": null,
+    "parents": [],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [
+    {
+      "note": "The non-normative element index suggests conditional Interactive membership; the normative Interactive list and object definition omit it. Interactive is therefore not assigned.",
+      "source": "SPEC.md (primary taxonomy classification_note)"
+    }
+  ],
+  "flags": [
+    {
+      "issue": "Element index lists 'interactive*'. The definition omits Interactive (an editorial comment says it is interactive only when showing a plugin or child navigable, which is hard to check statically) and the category index omits it too.",
+      "resolution": "Not classified as Interactive.",
+      "source": "SPEC.md (enriched taxonomy flags)"
+    }
+  ],
+  "main_primitive": {
+    "slug": "iframe",
+    "is_main": false,
+    "elements": [
+      "iframe"
+    ],
+    "job": "external-content",
+    "why": "External resource with fallback; image, document, or plugin.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<object data=\"report.pdf\" type=\"application/pdf\" width=\"600\" height=\"400\">Fallback content.</object>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Flow": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content",
+      "Embedded": "https://html.spec.whatwg.org/multipage/dom.html#embedded-content-2",
+      "Palpable": "https://html.spec.whatwg.org/multipage/dom.html#palpable-content",
+      "Form-associated": "https://html.spec.whatwg.org/multipage/forms.html#form-associated-element",
+      "listed": "https://html.spec.whatwg.org/multipage/forms.html#category-listed"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

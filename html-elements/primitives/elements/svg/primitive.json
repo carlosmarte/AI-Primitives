@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.svg",
+  "kind": "element",
+  "name": "svg",
+  "tag": "<svg>",
+  "title": "svg — SVG root",
+  "description": "SVG root",
+  "group": {
+    "id": "embedded",
+    "title": "Embedded content"
+  },
+  "dom": {
+    "interface": "SVGSVGElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/2000/svg"
+  },
+  "content_categories": {
+    "always": [
+      "Flow",
+      "Phrasing",
+      "Embedded",
+      "Palpable"
+    ],
+    "conditional": {},
+    "all": [
+      "Flow",
+      "Phrasing",
+      "Embedded",
+      "Palpable"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "foreign",
+    "start_tag": "required",
+    "end_tag": "required",
+    "self_closing_start_tag_allowed": true,
+    "children": "foreign",
+    "children_note": "Foreign element: contents follow the SVG or MathML specification. Self-closing start tags are honoured inside foreign content."
+  },
+  "placement": {
+    "parent_requirement": null,
+    "parents": [],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [],
+  "flags": [
+    {
+      "issue": "Defined by the SVG and MathML specs, not HTML; categories come from the HTML element index.",
+      "resolution": "Included as foreign elements.",
+      "source": "SPEC.md (enriched taxonomy flags)"
+    }
+  ],
+  "main_primitive": {
+    "slug": "canvas",
+    "is_main": false,
+    "elements": [
+      "canvas"
+    ],
+    "job": "external-content",
+    "why": "Drawn graphics described as vectors instead of scripted pixels.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\">\n  <circle cx=\"50\" cy=\"50\" r=\"40\"/>\n</svg>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/https://w3c.github.io/svgwg/svg2-draft/struct.html#elementdef-svg",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Flow": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content",
+      "Embedded": "https://html.spec.whatwg.org/multipage/dom.html#embedded-content-2",
+      "Palpable": "https://html.spec.whatwg.org/multipage/dom.html#palpable-content"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

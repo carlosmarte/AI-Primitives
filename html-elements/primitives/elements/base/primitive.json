@@ -1,0 +1,96 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.base",
+  "kind": "element",
+  "name": "base",
+  "tag": "<base>",
+  "title": "base — Base URL and default target navigable for hyperlinks and forms",
+  "description": "Base URL and default target navigable for hyperlinks and forms",
+  "group": {
+    "id": "document-metadata",
+    "title": "Document & metadata"
+  },
+  "dom": {
+    "interface": "HTMLBaseElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [
+      "Metadata"
+    ],
+    "conditional": {},
+    "all": [
+      "Metadata"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "void",
+    "start_tag": "required",
+    "end_tag": "forbidden",
+    "self_closing_start_tag_allowed": true,
+    "children": "none",
+    "children_note": "Void element: never has contents. An end tag must not be written; a trailing \"/\" in the start tag is permitted and ignored."
+  },
+  "placement": {
+    "parent_requirement": "Child of head; at most one base in the document.",
+    "parents": [],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [],
+  "flags": [],
+  "main_primitive": {
+    "slug": "link",
+    "is_main": false,
+    "elements": [
+      "link"
+    ],
+    "job": "document",
+    "why": "Document-level URL configuration for links and forms.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<head>\n  <base href=\"https://example.com/\">\n  <title>Page</title>\n</head>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Metadata": "https://html.spec.whatwg.org/multipage/dom.html#metadata-content"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

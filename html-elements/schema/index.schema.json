@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/carlosmarte/AI-Primitives/html-elements/schema/index.schema.json",
+  "title": "HTML AI Primitives index",
+  "type": "object",
+  "required": ["generated_from", "generator", "standard", "coverage", "conventions", "categories", "syntax_kinds", "groups", "primitives"],
+  "properties": {
+    "generated_from": { "const": "html-elements/SPEC.md" },
+    "generator": { "type": "string" },
+    "standard": { "type": "string" },
+    "standard_last_updated": { "type": "string", "format": "date" },
+    "retrieved_on": { "type": "string", "format": "date" },
+    "coverage": {
+      "type": "object",
+      "required": ["elements", "nodes", "custom_element", "total_primitives"],
+      "properties": {
+        "elements": { "type": "object", "required": ["expected", "generated"] },
+        "nodes": { "type": "object", "required": ["expected", "generated"] },
+        "custom_element": { "type": "object", "required": ["expected", "generated", "variants"], "properties": { "variants": { "type": "object", "required": ["expected", "generated"] } } },
+        "total_primitives": { "type": "integer" }
+      }
+    },
+    "conventions": { "type": "object" },
+    "categories": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["definition", "spec", "elements"],
+        "properties": {
+          "definition": { "type": "string" },
+          "spec": { "type": "string", "format": "uri" },
+          "elements": { "type": "object", "required": ["always", "conditional"] }
+        }
+      }
+    },
+    "syntax_kinds": { "type": "object", "additionalProperties": { "type": "array", "items": { "type": "string" } } },
+    "groups": { "type": "object", "additionalProperties": { "type": "object", "required": ["title", "elements"] } },
+    "primitives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "name", "path", "readme", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "kind": { "enum": ["element", "node", "custom-element"] },
+          "name": { "type": "string" },
+          "path": { "type": "string", "pattern": "primitive\\.json$" },
+          "readme": { "type": "string", "pattern": "README\\.md$" }
+        }
+      }
+    }
+  }
+}

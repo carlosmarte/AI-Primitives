@@ -1,0 +1,123 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.textarea",
+  "kind": "element",
+  "name": "textarea",
+  "tag": "<textarea>",
+  "title": "textarea — Multiline text controls",
+  "description": "Multiline text controls",
+  "group": {
+    "id": "forms",
+    "title": "Forms"
+  },
+  "dom": {
+    "interface": "HTMLTextAreaElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [
+      "Flow",
+      "Phrasing",
+      "Interactive",
+      "Palpable"
+    ],
+    "conditional": {},
+    "all": [
+      "Flow",
+      "Phrasing",
+      "Interactive",
+      "Palpable"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": true,
+    "always": [
+      "listed",
+      "submittable",
+      "resettable",
+      "autocapitalize-and-autocorrect-inheriting",
+      "labelable"
+    ],
+    "conditional": {},
+    "all": [
+      "listed",
+      "submittable",
+      "resettable",
+      "autocapitalize-and-autocorrect-inheriting",
+      "labelable"
+    ]
+  },
+  "syntax": {
+    "kind": "escapable raw text",
+    "start_tag": "required",
+    "end_tag": "required",
+    "self_closing_start_tag_allowed": false,
+    "children": "escapable-raw-text",
+    "children_note": "Escapable raw text element: contents are text only. Character references are decoded; child elements cannot be expressed."
+  },
+  "placement": {
+    "parent_requirement": null,
+    "parents": [],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [],
+  "flags": [],
+  "main_primitive": {
+    "slug": "textarea",
+    "is_main": true,
+    "elements": [
+      "textarea"
+    ],
+    "job": "input",
+    "why": "Multi-line text control.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<textarea name=\"notes\" rows=\"4\"></textarea>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Flow": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content",
+      "Interactive": "https://html.spec.whatwg.org/multipage/dom.html#interactive-content",
+      "Palpable": "https://html.spec.whatwg.org/multipage/dom.html#palpable-content",
+      "Form-associated": "https://html.spec.whatwg.org/multipage/forms.html#form-associated-element",
+      "listed": "https://html.spec.whatwg.org/multipage/forms.html#category-listed",
+      "submittable": "https://html.spec.whatwg.org/multipage/forms.html#category-submit",
+      "resettable": "https://html.spec.whatwg.org/multipage/forms.html#category-reset",
+      "autocapitalize-and-autocorrect-inheriting": "https://html.spec.whatwg.org/multipage/forms.html#category-autocapitalize",
+      "labelable": "https://html.spec.whatwg.org/multipage/forms.html#category-label"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

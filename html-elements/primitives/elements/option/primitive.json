@@ -1,0 +1,95 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.option",
+  "kind": "element",
+  "name": "option",
+  "tag": "<option>",
+  "title": "option — Option in a list box or combo box control",
+  "description": "Option in a list box or combo box control",
+  "group": {
+    "id": "forms",
+    "title": "Forms"
+  },
+  "dom": {
+    "interface": "HTMLOptionElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [],
+    "conditional": {},
+    "all": [],
+    "context_restricted": true
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "normal",
+    "start_tag": "required",
+    "end_tag": "optional",
+    "self_closing_start_tag_allowed": false,
+    "children": "normal",
+    "children_note": "Child content is governed by the element’s content model in its spec definition."
+  },
+  "placement": {
+    "parent_requirement": "Descendant of select, datalist, or optgroup; immediate parent must permit option under the applicable content model (including permitted div wrappers).",
+    "parents": [
+      "select",
+      "datalist",
+      "optgroup",
+      "div*"
+    ],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [],
+  "flags": [],
+  "main_primitive": {
+    "slug": "option",
+    "is_main": true,
+    "elements": [
+      "option"
+    ],
+    "job": "input",
+    "why": "One choice in a select or datalist.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<select name=\"size\">\n  <option value=\"s\">Small</option>\n  <option value=\"m\">Medium</option>\n</select>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": "https://html.spec.whatwg.org/multipage/syntax.html#optional-tags",
+    "categories": {}
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

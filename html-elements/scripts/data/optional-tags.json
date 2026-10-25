@@ -1,0 +1,23 @@
+{
+  "_source": "WHATWG HTML Living Standard, 13.1.2.4 Optional tags (https://html.spec.whatwg.org/multipage/syntax.html#optional-tags). Authored from the standard; not present in SPEC.md.",
+  "_note": "Only elements listed here have an optional start and/or end tag in text/html. Every other non-void element requires its end tag; void elements forbid it.",
+  "html": { "start_tag": "optional", "end_tag": "optional" },
+  "head": { "start_tag": "optional", "end_tag": "optional" },
+  "body": { "start_tag": "optional", "end_tag": "optional" },
+  "li": { "end_tag": "optional" },
+  "dt": { "end_tag": "optional" },
+  "dd": { "end_tag": "optional" },
+  "p": { "end_tag": "optional" },
+  "rt": { "end_tag": "optional" },
+  "rp": { "end_tag": "optional" },
+  "optgroup": { "end_tag": "optional" },
+  "option": { "end_tag": "optional" },
+  "colgroup": { "start_tag": "optional", "end_tag": "optional" },
+  "caption": { "end_tag": "optional" },
+  "thead": { "end_tag": "optional" },
+  "tbody": { "start_tag": "optional", "end_tag": "optional" },
+  "tfoot": { "end_tag": "optional" },
+  "tr": { "end_tag": "optional" },
+  "td": { "end_tag": "optional" },
+  "th": { "end_tag": "optional" }
+}

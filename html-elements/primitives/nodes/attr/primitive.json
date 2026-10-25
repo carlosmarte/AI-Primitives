@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "dom.node.attr",
+  "kind": "node",
+  "name": "Attr",
+  "slug": "attr",
+  "title": "Attr — nodeType 2",
+  "description": "Attribute node; associated with an element, not a child in the node tree.",
+  "dom": {
+    "interface": "Attr",
+    "nodeType": 2,
+    "node_type_constant": "Node.ATTRIBUTE_NODE",
+    "applies_to": "HTML and XML"
+  },
+  "content_categories": null,
+  "placement": {
+    "parent": "None. Attached to an Element via its NamedNodeMap (element.attributes); ownerElement points back to it."
+  },
+  "serialization": {
+    "text_html": "Serialized inside its owner element’s start tag as name=\"value\" with &, \", and U+00A0 escaped. Never appears as a child node."
+  },
+  "creation": "document.createAttribute(localName) or element.setAttribute(name, value)",
+  "notes": [
+    {
+      "note": "A Node, but never a child in the tree; hangs off an Element.",
+      "source": "SPEC.md (enriched taxonomy dom_node_types)"
+    }
+  ],
+  "example": "<a href=\"/docs\" target=\"_blank\">Docs</a>  <!-- href and target are Attr nodes -->",
+  "spec": {
+    "node": "https://dom.spec.whatwg.org/#interface-node",
+    "dom_node_types": "https://dom.spec.whatwg.org/#node"
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "dom.interface",
+      "dom.nodeType",
+      "dom.applies_to",
+      "description",
+      "notes"
+    ],
+    "authored": [
+      "slug",
+      "dom.node_type_constant",
+      "content_categories",
+      "placement",
+      "serialization",
+      "creation",
+      "example"
+    ]
+  }
+}

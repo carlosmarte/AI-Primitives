@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "dom.node.comment",
+  "kind": "node",
+  "name": "Comment",
+  "slug": "comment",
+  "title": "Comment — nodeType 8",
+  "description": "Comment node.",
+  "dom": {
+    "interface": "Comment",
+    "nodeType": 8,
+    "node_type_constant": "Node.COMMENT_NODE",
+    "applies_to": "HTML and XML"
+  },
+  "content_categories": null,
+  "placement": {
+    "parent": "Document, Element, or DocumentFragment"
+  },
+  "serialization": {
+    "text_html": "Serialized as <!--data-->."
+  },
+  "creation": "document.createComment(data)",
+  "notes": [],
+  "example": "<!-- This is a Comment node -->",
+  "spec": {
+    "node": "https://dom.spec.whatwg.org/#interface-node",
+    "dom_node_types": "https://dom.spec.whatwg.org/#node"
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "dom.interface",
+      "dom.nodeType",
+      "dom.applies_to",
+      "description",
+      "notes"
+    ],
+    "authored": [
+      "slug",
+      "dom.node_type_constant",
+      "content_categories",
+      "placement",
+      "serialization",
+      "creation",
+      "example"
+    ]
+  }
+}

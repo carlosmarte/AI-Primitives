@@ -1,0 +1,149 @@
+{
+  "$schema": "../../schema/primitive.schema.json",
+  "id": "html.custom-element",
+  "kind": "custom-element",
+  "name": "custom element",
+  "tag": "<name-with-dash>",
+  "title": "Custom element — author-defined element name containing a hyphen",
+  "description": "Any element whose custom element name is a valid hyphenated name registered through customElements.define(). Names cannot be enumerated, so one primitive covers the whole family. Three variants exist and share the same naming rule; they differ only in the base class they extend and in the categories they gain.",
+  "dom": {
+    "interface": "HTMLElement (autonomous and form-associated) or the extended built-in interface (customized built-in), subclassed by the author",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "naming": {
+    "rule": "Valid custom element name: begins with [a-z], contains at least one hyphen, contains no uppercase ASCII letters, and is not a reserved hyphenated name (annotation-xml, color-profile, font-face, font-face-src, font-face-uri, font-face-format, font-face-name, missing-glyph).",
+    "spec": "https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name",
+    "registration": "customElements.define(name, constructor[, { extends }])"
+  },
+  "content_categories": {
+    "always": [
+      "Flow",
+      "Phrasing",
+      "Palpable"
+    ],
+    "conditional": {},
+    "all": [
+      "Flow",
+      "Phrasing",
+      "Palpable"
+    ],
+    "context_restricted": false,
+    "note": "Applies to the autonomous and form-associated variants. A customized built-in element takes the categories of its built-in local name instead."
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": [],
+    "note": "Autonomous variant: none. Form-associated variant: see variants.form-associated. Customized built-in variant: those of the built-in local name."
+  },
+  "syntax": {
+    "kind": "normal",
+    "start_tag": "required",
+    "end_tag": "required",
+    "self_closing_start_tag_allowed": false,
+    "children": "normal",
+    "children_note": "Child content is governed by the element’s content model in its spec definition.",
+    "note": "Applies to the autonomous and form-associated variants; a customized built-in element keeps the syntax kind of its built-in local name."
+  },
+  "placement": {
+    "parent_requirement": null,
+    "parents": [],
+    "note": "Allowed wherever flow or phrasing content is expected, subject to the enclosing content model. A customized built-in element follows the placement of its built-in local name."
+  },
+  "variants": {
+    "autonomous": {
+      "title": "Autonomous custom element",
+      "description": "Extends HTMLElement directly and is written with its own tag name.",
+      "interface": "HTMLElement (author subclass)",
+      "content_categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "form_categories": [],
+      "form_associated": false,
+      "syntax": "normal",
+      "example": "<user-card name=\"Ada\"></user-card>\n<script>\n  customElements.define(\"user-card\", class extends HTMLElement {});\n</script>",
+      "spec": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements"
+    },
+    "form-associated": {
+      "title": "Form-associated custom element",
+      "description": "An autonomous custom element whose class sets static formAssociated = true. It gains a form owner through ElementInternals and joins the listed form categories in addition to the autonomous categories.",
+      "interface": "HTMLElement (author subclass with static formAssociated = true)",
+      "content_categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "form_categories": [
+        "listed",
+        "submittable",
+        "resettable",
+        "labelable"
+      ],
+      "form_associated": true,
+      "syntax": "normal",
+      "note": "Does not automatically gain autocapitalize-and-autocorrect-inheriting membership.",
+      "example": "<form>\n  <fancy-input name=\"nickname\"></fancy-input>\n</form>\n<script>\n  customElements.define(\"fancy-input\", class extends HTMLElement {\n    static formAssociated = true;\n    #internals = this.attachInternals();\n  });\n</script>",
+      "spec": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-face-example"
+    },
+    "customized-built-in": {
+      "title": "Customized built-in element",
+      "description": "Extends a built-in element’s interface and is used through the is=\"\" attribute on the built-in tag. The hyphenated name is the is value; no new element name is introduced.",
+      "interface": "The built-in element’s interface (for example HTMLButtonElement), subclassed by the author",
+      "content_categories": "inherited from the built-in local name",
+      "form_categories": "inherited from the built-in local name",
+      "form_associated": "inherited from the built-in local name",
+      "syntax": "inherited from the built-in local name",
+      "note": "Use the classification of their built-in local name; is does not introduce a new element name.",
+      "example": "<button is=\"fancy-button\">Click</button>\n<script>\n  customElements.define(\"fancy-button\", class extends HTMLButtonElement {}, { extends: \"button\" });\n</script>",
+      "spec": "https://html.spec.whatwg.org/multipage/custom-elements.html#customized-built-in-element"
+    }
+  },
+  "example": "<user-card name=\"Ada\"></user-card>\n<script>\n  customElements.define(\"user-card\", class extends HTMLElement {});\n</script>",
+  "spec": {
+    "family": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements",
+    "naming": "https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name",
+    "categories": {
+      "Flow": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content",
+      "Palpable": "https://html.spec.whatwg.org/multipage/dom.html#palpable-content",
+      "Form-associated": "https://html.spec.whatwg.org/multipage/forms.html#form-associated-element",
+      "listed": "https://html.spec.whatwg.org/multipage/forms.html#category-listed",
+      "submittable": "https://html.spec.whatwg.org/multipage/forms.html#category-submit",
+      "resettable": "https://html.spec.whatwg.org/multipage/forms.html#category-reset",
+      "labelable": "https://html.spec.whatwg.org/multipage/forms.html#category-label"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "content_categories.always",
+      "syntax.kind",
+      "variants.*.content_categories",
+      "variants.*.form_categories",
+      "variants.form-associated.note",
+      "variants.customized-built-in.note",
+      "spec.family",
+      "variants.*.spec"
+    ],
+    "authored": [
+      "description",
+      "naming",
+      "dom.interface",
+      "placement",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.children",
+      "variants.*.description",
+      "variants.*.example",
+      "example"
+    ]
+  }
+}

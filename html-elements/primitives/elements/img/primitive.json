@@ -1,0 +1,110 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.img",
+  "kind": "element",
+  "name": "img",
+  "tag": "<img>",
+  "title": "img — Image",
+  "description": "Image",
+  "group": {
+    "id": "embedded",
+    "title": "Embedded content"
+  },
+  "dom": {
+    "interface": "HTMLImageElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [
+      "Flow",
+      "Phrasing",
+      "Embedded",
+      "Palpable"
+    ],
+    "conditional": {
+      "Interactive": "the usemap or controls attribute is present"
+    },
+    "all": [
+      "Flow",
+      "Phrasing",
+      "Embedded",
+      "Interactive",
+      "Palpable"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": true,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "void",
+    "start_tag": "required",
+    "end_tag": "forbidden",
+    "self_closing_start_tag_allowed": true,
+    "children": "none",
+    "children_note": "Void element: never has contents. An end tag must not be written; a trailing \"/\" in the start tag is permitted and ignored."
+  },
+  "placement": {
+    "parent_requirement": null,
+    "parents": [],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [],
+  "flags": [],
+  "main_primitive": {
+    "slug": "img",
+    "is_main": true,
+    "elements": [
+      "img"
+    ],
+    "job": "external-content",
+    "why": "A picture.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<img src=\"logo.png\" alt=\"Company logo\" width=\"120\" height=\"40\">",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Flow": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content",
+      "Embedded": "https://html.spec.whatwg.org/multipage/dom.html#embedded-content-2",
+      "Interactive": "https://html.spec.whatwg.org/multipage/dom.html#interactive-content",
+      "Palpable": "https://html.spec.whatwg.org/multipage/dom.html#palpable-content",
+      "Form-associated": "https://html.spec.whatwg.org/multipage/forms.html#form-associated-element"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

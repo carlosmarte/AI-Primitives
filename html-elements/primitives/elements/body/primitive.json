@@ -1,0 +1,92 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.body",
+  "kind": "element",
+  "name": "body",
+  "tag": "<body>",
+  "title": "body — Document body",
+  "description": "Document body",
+  "group": {
+    "id": "sections",
+    "title": "Sections"
+  },
+  "dom": {
+    "interface": "HTMLBodyElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [],
+    "conditional": {},
+    "all": [],
+    "context_restricted": true
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "normal",
+    "start_tag": "optional",
+    "end_tag": "optional",
+    "self_closing_start_tag_allowed": false,
+    "children": "normal",
+    "children_note": "Child content is governed by the element’s content model in its spec definition."
+  },
+  "placement": {
+    "parent_requirement": "Second element child of html.",
+    "parents": [
+      "html"
+    ],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [],
+  "flags": [],
+  "main_primitive": {
+    "slug": "body",
+    "is_main": true,
+    "elements": [
+      "body"
+    ],
+    "job": "document",
+    "why": "Container for the rendered content.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<body>\n  <p>Hello, world.</p>\n</body>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/sections.html#the-body-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": "https://html.spec.whatwg.org/multipage/syntax.html#optional-tags",
+    "categories": {}
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

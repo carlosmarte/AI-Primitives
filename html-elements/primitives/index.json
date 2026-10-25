@@ -1,0 +1,3701 @@
+{
+  "$schema": "../schema/index.schema.json",
+  "generated_from": "html-elements/SPEC.md",
+  "generator": "html-elements/scripts/generate-primitives.mjs",
+  "standard": "WHATWG HTML Living Standard",
+  "standard_last_updated": "2026-10-22",
+  "retrieved_on": "2026-10-24",
+  "coverage": {
+    "elements": {
+      "expected": 115,
+      "generated": 115,
+      "named_html_elements": 113,
+      "foreign_root_elements": 2
+    },
+    "nodes": {
+      "expected": 9,
+      "generated": 9
+    },
+    "custom_element": {
+      "expected": 1,
+      "generated": 1,
+      "variants": {
+        "expected": 3,
+        "generated": 3
+      }
+    },
+    "total_primitives": 125
+  },
+  "conventions": {
+    "membership": "categories includes both unconditional and conditional memberships. If a category is a key in conditional, membership applies only when that condition holds. Counts and reverse_index include conditional candidates once each; they are not counts for a particular document.",
+    "context_restricted": "Empty categories arrays are retained; Context-restricted exists only in the reverse index and summary as the requested reporting bucket. Conditional elements whose condition fails are not automatically reclassified into this static bucket.",
+    "parent_requirement": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator.",
+    "form_hierarchy": "The requested labelable subcategory is presented alongside the form categories, but is not strictly a subset of Form-associated: meter and progress are labelable without being form-associated.",
+    "syntax_scope": "Syntax kinds apply to text/html serialization; XML has different syntax rules.",
+    "classification_policy": "Normative category definitions and normative element definitions take precedence over the non-normative index. Known discrepancies are flagged per element with classification_note."
+  },
+  "categories": {
+    "Metadata": {
+      "definition": "Configures presentation, behavior, document relationships, or other out-of-band information.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#metadata-content",
+      "elements": {
+        "always": [
+          "base",
+          "link",
+          "meta",
+          "noscript",
+          "script",
+          "style",
+          "template",
+          "title"
+        ],
+        "conditional": {}
+      }
+    },
+    "Flow": {
+      "definition": "Content ordinarily used in document and application bodies.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "elements": {
+        "always": [
+          "a",
+          "abbr",
+          "address",
+          "article",
+          "aside",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "blockquote",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "details",
+          "dfn",
+          "dialog",
+          "div",
+          "dl",
+          "em",
+          "embed",
+          "fieldset",
+          "figure",
+          "footer",
+          "form",
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6",
+          "header",
+          "hgroup",
+          "hr",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "menu",
+          "meter",
+          "nav",
+          "noscript",
+          "object",
+          "ol",
+          "output",
+          "p",
+          "picture",
+          "pre",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "script",
+          "search",
+          "section",
+          "select",
+          "slot",
+          "small",
+          "span",
+          "strong",
+          "style",
+          "sub",
+          "sup",
+          "svg",
+          "table",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "ul",
+          "var",
+          "video",
+          "wbr"
+        ],
+        "conditional": {
+          "area": "it is a descendant of a map element",
+          "link": "itemprop is present, or rel is present and contains only keywords defined as body-ok",
+          "main": "a hierarchically correct main element: ancestor elements are limited to html, body, div, form without an accessible name, and autonomous custom elements",
+          "meta": "the itemprop attribute is present"
+        }
+      }
+    },
+    "Sectioning": {
+      "definition": "Defines the scope of header and footer elements.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#sectioning-content",
+      "elements": {
+        "always": [
+          "article",
+          "aside",
+          "nav",
+          "section"
+        ],
+        "conditional": {}
+      }
+    },
+    "Heading": {
+      "definition": "Defines a section heading.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#heading-content",
+      "elements": {
+        "always": [
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6"
+        ],
+        "conditional": {
+          "hgroup": "it has a descendant h1 to h6 element"
+        }
+      }
+    },
+    "Phrasing": {
+      "definition": "Text and elements marking up text within paragraphs.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content",
+      "elements": {
+        "always": [
+          "a",
+          "abbr",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "picture",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "script",
+          "select",
+          "slot",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr"
+        ],
+        "conditional": {
+          "area": "it is a descendant of a map element",
+          "link": "itemprop is present, or rel is present and contains only keywords defined as body-ok",
+          "meta": "the itemprop attribute is present",
+          "selectedcontent": "descendant of a button that is a child of select"
+        }
+      }
+    },
+    "Embedded": {
+      "definition": "Imports resources or inserts content from another vocabulary.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#embedded-content-2",
+      "elements": {
+        "always": [
+          "audio",
+          "canvas",
+          "embed",
+          "iframe",
+          "img",
+          "math",
+          "object",
+          "picture",
+          "svg",
+          "video"
+        ],
+        "conditional": {}
+      }
+    },
+    "Interactive": {
+      "definition": "Content specifically intended for user interaction.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#interactive-content",
+      "elements": {
+        "always": [
+          "button",
+          "details",
+          "embed",
+          "iframe",
+          "label",
+          "select",
+          "textarea"
+        ],
+        "conditional": {
+          "a": "the href attribute is present",
+          "audio": "the controls attribute is present",
+          "img": "the usemap or controls attribute is present",
+          "input": "the type attribute is not in the Hidden state",
+          "video": "the controls attribute is present"
+        }
+      }
+    },
+    "Palpable": {
+      "definition": "Provides meaningful non-empty text, media, or user-interactable content.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#palpable-content",
+      "elements": {
+        "always": [
+          "a",
+          "abbr",
+          "address",
+          "article",
+          "aside",
+          "b",
+          "bdi",
+          "bdo",
+          "blockquote",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "del",
+          "details",
+          "dfn",
+          "div",
+          "em",
+          "embed",
+          "fieldset",
+          "figure",
+          "footer",
+          "form",
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6",
+          "header",
+          "hgroup",
+          "i",
+          "iframe",
+          "img",
+          "ins",
+          "kbd",
+          "label",
+          "main",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "nav",
+          "object",
+          "output",
+          "p",
+          "picture",
+          "pre",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "search",
+          "section",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "table",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video"
+        ],
+        "conditional": {
+          "audio": "the controls attribute is present",
+          "dl": "the element's children include at least one name-value group",
+          "input": "the type attribute is not in the Hidden state",
+          "menu": "the element's children include at least one li element",
+          "ol": "the element's children include at least one li element",
+          "ul": "the element's children include at least one li element"
+        }
+      }
+    },
+    "Script-supporting": {
+      "definition": "Supports scripts without representing rendered content itself.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#script-supporting-elements",
+      "elements": {
+        "always": [
+          "script",
+          "template"
+        ],
+        "conditional": {}
+      }
+    },
+    "Form-associated": {
+      "definition": "Elements that can have a form owner.",
+      "spec": "https://html.spec.whatwg.org/multipage/forms.html#form-associated-element",
+      "elements": {
+        "always": [
+          "button",
+          "fieldset",
+          "img",
+          "input",
+          "object",
+          "output",
+          "select",
+          "textarea"
+        ],
+        "conditional": {}
+      }
+    },
+    "listed": {
+      "definition": "Participates in the form.elements and fieldset.elements APIs.",
+      "spec": "https://html.spec.whatwg.org/multipage/forms.html#category-listed",
+      "elements": {
+        "always": [
+          "button",
+          "fieldset",
+          "input",
+          "object",
+          "output",
+          "select",
+          "textarea"
+        ],
+        "conditional": {}
+      }
+    },
+    "submittable": {
+      "definition": "Can contribute to the entry list constructed during form submission.",
+      "spec": "https://html.spec.whatwg.org/multipage/forms.html#category-submit",
+      "elements": {
+        "always": [
+          "button",
+          "input",
+          "select",
+          "textarea"
+        ],
+        "conditional": {}
+      }
+    },
+    "resettable": {
+      "definition": "Can be affected by resetting a form.",
+      "spec": "https://html.spec.whatwg.org/multipage/forms.html#category-reset",
+      "elements": {
+        "always": [
+          "input",
+          "output",
+          "select",
+          "textarea"
+        ],
+        "conditional": {}
+      }
+    },
+    "autocapitalize-and-autocorrect-inheriting": {
+      "definition": "Inherits autocapitalize and autocorrect from its form owner.",
+      "spec": "https://html.spec.whatwg.org/multipage/forms.html#category-autocapitalize",
+      "elements": {
+        "always": [
+          "button",
+          "fieldset",
+          "input",
+          "output",
+          "select",
+          "textarea"
+        ],
+        "conditional": {}
+      }
+    },
+    "labelable": {
+      "definition": "Can be associated with a label element.",
+      "spec": "https://html.spec.whatwg.org/multipage/forms.html#category-label",
+      "elements": {
+        "always": [
+          "button",
+          "meter",
+          "output",
+          "progress",
+          "select",
+          "textarea"
+        ],
+        "conditional": {
+          "input": "the type attribute is not in the Hidden state"
+        }
+      }
+    },
+    "Context-restricted": {
+      "definition": "Requested reporting bucket for elements with no membership in the requested categories; not a WHATWG content category.",
+      "spec": "https://html.spec.whatwg.org/multipage/dom.html#concept-element-categories",
+      "elements": {
+        "always": [
+          "body",
+          "caption",
+          "col",
+          "colgroup",
+          "dd",
+          "dt",
+          "figcaption",
+          "head",
+          "html",
+          "legend",
+          "li",
+          "optgroup",
+          "option",
+          "rp",
+          "rt",
+          "source",
+          "summary",
+          "tbody",
+          "td",
+          "tfoot",
+          "th",
+          "thead",
+          "tr",
+          "track"
+        ],
+        "conditional": {}
+      }
+    }
+  },
+  "syntax_kinds": {
+    "normal": [
+      "a",
+      "abbr",
+      "address",
+      "article",
+      "aside",
+      "audio",
+      "b",
+      "bdi",
+      "bdo",
+      "blockquote",
+      "body",
+      "button",
+      "canvas",
+      "caption",
+      "cite",
+      "code",
+      "colgroup",
+      "data",
+      "datalist",
+      "dd",
+      "del",
+      "details",
+      "dfn",
+      "dialog",
+      "div",
+      "dl",
+      "dt",
+      "em",
+      "fieldset",
+      "figcaption",
+      "figure",
+      "footer",
+      "form",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "head",
+      "header",
+      "hgroup",
+      "html",
+      "i",
+      "iframe",
+      "ins",
+      "kbd",
+      "label",
+      "legend",
+      "li",
+      "main",
+      "map",
+      "mark",
+      "menu",
+      "meter",
+      "nav",
+      "noscript",
+      "object",
+      "ol",
+      "optgroup",
+      "option",
+      "output",
+      "p",
+      "picture",
+      "pre",
+      "progress",
+      "q",
+      "rp",
+      "rt",
+      "ruby",
+      "s",
+      "samp",
+      "search",
+      "section",
+      "select",
+      "selectedcontent",
+      "slot",
+      "small",
+      "span",
+      "strong",
+      "sub",
+      "summary",
+      "sup",
+      "table",
+      "tbody",
+      "td",
+      "tfoot",
+      "th",
+      "thead",
+      "time",
+      "tr",
+      "u",
+      "ul",
+      "var",
+      "video"
+    ],
+    "void": [
+      "area",
+      "base",
+      "br",
+      "col",
+      "embed",
+      "hr",
+      "img",
+      "input",
+      "link",
+      "meta",
+      "source",
+      "track",
+      "wbr"
+    ],
+    "foreign": [
+      "math",
+      "svg"
+    ],
+    "raw text": [
+      "script",
+      "style"
+    ],
+    "template": [
+      "template"
+    ],
+    "escapable raw text": [
+      "textarea",
+      "title"
+    ]
+  },
+  "groups": {
+    "document-metadata": {
+      "title": "Document & metadata",
+      "elements": [
+        "html",
+        "head",
+        "title",
+        "base",
+        "link",
+        "meta",
+        "style"
+      ]
+    },
+    "sections": {
+      "title": "Sections",
+      "elements": [
+        "body",
+        "article",
+        "section",
+        "nav",
+        "aside",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "hgroup",
+        "header",
+        "footer",
+        "address",
+        "main",
+        "search"
+      ]
+    },
+    "grouping-content": {
+      "title": "Grouping content",
+      "elements": [
+        "p",
+        "hr",
+        "pre",
+        "blockquote",
+        "ol",
+        "ul",
+        "menu",
+        "li",
+        "dl",
+        "dt",
+        "dd",
+        "figure",
+        "figcaption",
+        "div"
+      ]
+    },
+    "text-level": {
+      "title": "Text-level semantics",
+      "elements": [
+        "a",
+        "em",
+        "strong",
+        "small",
+        "s",
+        "cite",
+        "q",
+        "dfn",
+        "abbr",
+        "ruby",
+        "rt",
+        "rp",
+        "data",
+        "time",
+        "code",
+        "var",
+        "samp",
+        "kbd",
+        "sub",
+        "sup",
+        "i",
+        "b",
+        "u",
+        "mark",
+        "bdi",
+        "bdo",
+        "span",
+        "br",
+        "wbr"
+      ]
+    },
+    "edits": {
+      "title": "Edits",
+      "elements": [
+        "ins",
+        "del"
+      ]
+    },
+    "embedded": {
+      "title": "Embedded content",
+      "elements": [
+        "picture",
+        "source",
+        "img",
+        "iframe",
+        "embed",
+        "object",
+        "video",
+        "audio",
+        "track",
+        "map",
+        "area",
+        "svg",
+        "math"
+      ]
+    },
+    "tables": {
+      "title": "Tabular data",
+      "elements": [
+        "table",
+        "caption",
+        "colgroup",
+        "col",
+        "thead",
+        "tbody",
+        "tfoot",
+        "tr",
+        "th",
+        "td"
+      ]
+    },
+    "forms": {
+      "title": "Forms",
+      "elements": [
+        "form",
+        "label",
+        "input",
+        "button",
+        "select",
+        "datalist",
+        "optgroup",
+        "option",
+        "selectedcontent",
+        "textarea",
+        "output",
+        "progress",
+        "meter",
+        "fieldset",
+        "legend"
+      ]
+    },
+    "interactive": {
+      "title": "Interactive elements",
+      "elements": [
+        "details",
+        "summary",
+        "dialog"
+      ]
+    },
+    "scripting": {
+      "title": "Scripting & components",
+      "elements": [
+        "script",
+        "noscript",
+        "template",
+        "slot",
+        "canvas"
+      ]
+    }
+  },
+  "main_primitives": {
+    "thesis": "The language reduces to two generic boxes, div (block) and span (inline). Every other element is one of those with meaning or behaviour added. The main primitives below are the elements that add a capability the generic box cannot express; everything else is a semantic label on one of them.",
+    "count": 36,
+    "elements_covered": 43,
+    "jobs": {
+      "generic-box": {
+        "title": "Generic box",
+        "description": "div and span, treated as one primitive: a block or inline container with no meaning of its own."
+      },
+      "document": {
+        "title": "Document skeleton",
+        "description": "The nodes every page needs before any content: root, metadata container, body, metadata, external resources."
+      },
+      "structure": {
+        "title": "Structure",
+        "description": "Sections, headings, paragraphs, lists, preformatted blocks, tables, line breaks."
+      },
+      "navigation": {
+        "title": "Navigation",
+        "description": "The hyperlink."
+      },
+      "input": {
+        "title": "Input",
+        "description": "Collecting data from the user: form, input, button, select, textarea, label."
+      },
+      "external-content": {
+        "title": "External content",
+        "description": "img, video, audio for media; source for alternatives; iframe for another document; canvas for drawn pixels."
+      },
+      "built-in-behavior": {
+        "title": "Built-in behaviour",
+        "description": "details for disclosure and dialog for a modal; the popover attribute covers the third pattern."
+      },
+      "code": {
+        "title": "Code and components",
+        "description": "script, template, slot."
+      }
+    },
+    "list": [
+      {
+        "slug": "html",
+        "elements": [
+          "html"
+        ],
+        "group": "document-metadata",
+        "job": "document",
+        "role": "Root of the document.",
+        "variants": []
+      },
+      {
+        "slug": "head",
+        "elements": [
+          "head"
+        ],
+        "group": "document-metadata",
+        "job": "document",
+        "role": "Container for metadata.",
+        "variants": []
+      },
+      {
+        "slug": "body",
+        "elements": [
+          "body"
+        ],
+        "group": "sections",
+        "job": "document",
+        "role": "Container for the rendered content.",
+        "variants": []
+      },
+      {
+        "slug": "meta",
+        "elements": [
+          "meta"
+        ],
+        "group": "document-metadata",
+        "job": "document",
+        "role": "Document-level name/value metadata.",
+        "variants": [
+          "title"
+        ]
+      },
+      {
+        "slug": "link",
+        "elements": [
+          "link"
+        ],
+        "group": "document-metadata",
+        "job": "document",
+        "role": "Relationship to an external resource.",
+        "variants": [
+          "base",
+          "style"
+        ]
+      },
+      {
+        "slug": "section",
+        "elements": [
+          "section"
+        ],
+        "group": "sections",
+        "job": "structure",
+        "role": "A thematic grouping with its own heading scope.",
+        "variants": [
+          "article",
+          "nav",
+          "aside",
+          "header",
+          "footer",
+          "main",
+          "search",
+          "address"
+        ]
+      },
+      {
+        "slug": "heading",
+        "elements": [
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6"
+        ],
+        "group": "sections",
+        "job": "structure",
+        "role": "Section heading at one of six levels.",
+        "variants": [
+          "hgroup"
+        ]
+      },
+      {
+        "slug": "div",
+        "elements": [
+          "div"
+        ],
+        "group": "grouping-content",
+        "job": "generic-box",
+        "role": "Generic block container.",
+        "variants": [
+          "blockquote",
+          "figure"
+        ]
+      },
+      {
+        "slug": "p",
+        "elements": [
+          "p"
+        ],
+        "group": "grouping-content",
+        "job": "structure",
+        "role": "Paragraph.",
+        "variants": [
+          "hr",
+          "figcaption"
+        ]
+      },
+      {
+        "slug": "list",
+        "elements": [
+          "ul",
+          "ol"
+        ],
+        "group": "grouping-content",
+        "job": "structure",
+        "role": "Unordered or ordered list container.",
+        "variants": [
+          "menu",
+          "dl"
+        ]
+      },
+      {
+        "slug": "li",
+        "elements": [
+          "li"
+        ],
+        "group": "grouping-content",
+        "job": "structure",
+        "role": "List item.",
+        "variants": [
+          "dt",
+          "dd"
+        ]
+      },
+      {
+        "slug": "pre",
+        "elements": [
+          "pre"
+        ],
+        "group": "grouping-content",
+        "job": "structure",
+        "role": "Preformatted block; whitespace is significant.",
+        "variants": []
+      },
+      {
+        "slug": "span",
+        "elements": [
+          "span"
+        ],
+        "group": "text-level",
+        "job": "generic-box",
+        "role": "Generic inline container.",
+        "variants": [
+          "em",
+          "strong",
+          "small",
+          "s",
+          "cite",
+          "q",
+          "dfn",
+          "abbr",
+          "ruby",
+          "rt",
+          "rp",
+          "data",
+          "time",
+          "code",
+          "var",
+          "samp",
+          "kbd",
+          "sub",
+          "sup",
+          "i",
+          "b",
+          "u",
+          "mark",
+          "bdi",
+          "bdo",
+          "ins",
+          "del",
+          "math",
+          "output",
+          "progress",
+          "meter"
+        ]
+      },
+      {
+        "slug": "a",
+        "elements": [
+          "a"
+        ],
+        "group": "text-level",
+        "job": "navigation",
+        "role": "Hyperlink.",
+        "variants": [
+          "area"
+        ]
+      },
+      {
+        "slug": "br",
+        "elements": [
+          "br"
+        ],
+        "group": "text-level",
+        "job": "structure",
+        "role": "Line break.",
+        "variants": [
+          "wbr"
+        ]
+      },
+      {
+        "slug": "img",
+        "elements": [
+          "img"
+        ],
+        "group": "embedded",
+        "job": "external-content",
+        "role": "A picture.",
+        "variants": [
+          "picture",
+          "map"
+        ]
+      },
+      {
+        "slug": "video",
+        "elements": [
+          "video"
+        ],
+        "group": "embedded",
+        "job": "external-content",
+        "role": "Video player.",
+        "variants": []
+      },
+      {
+        "slug": "audio",
+        "elements": [
+          "audio"
+        ],
+        "group": "embedded",
+        "job": "external-content",
+        "role": "Audio player.",
+        "variants": []
+      },
+      {
+        "slug": "source",
+        "elements": [
+          "source"
+        ],
+        "group": "embedded",
+        "job": "external-content",
+        "role": "Alternative resource for a picture or media element.",
+        "variants": [
+          "track"
+        ]
+      },
+      {
+        "slug": "iframe",
+        "elements": [
+          "iframe"
+        ],
+        "group": "embedded",
+        "job": "external-content",
+        "role": "Another document, embedded.",
+        "variants": [
+          "embed",
+          "object"
+        ]
+      },
+      {
+        "slug": "canvas",
+        "elements": [
+          "canvas"
+        ],
+        "group": "scripting",
+        "job": "external-content",
+        "role": "Drawn pixels under script control.",
+        "variants": [
+          "svg"
+        ]
+      },
+      {
+        "slug": "table",
+        "elements": [
+          "table"
+        ],
+        "group": "tables",
+        "job": "structure",
+        "role": "Tabular data container.",
+        "variants": [
+          "caption",
+          "colgroup",
+          "col",
+          "thead",
+          "tbody",
+          "tfoot"
+        ]
+      },
+      {
+        "slug": "tr",
+        "elements": [
+          "tr"
+        ],
+        "group": "tables",
+        "job": "structure",
+        "role": "Table row.",
+        "variants": []
+      },
+      {
+        "slug": "cell",
+        "elements": [
+          "td",
+          "th"
+        ],
+        "group": "tables",
+        "job": "structure",
+        "role": "Table data or header cell.",
+        "variants": []
+      },
+      {
+        "slug": "form",
+        "elements": [
+          "form"
+        ],
+        "group": "forms",
+        "job": "input",
+        "role": "Submittable group of controls.",
+        "variants": [
+          "fieldset"
+        ]
+      },
+      {
+        "slug": "input",
+        "elements": [
+          "input"
+        ],
+        "group": "forms",
+        "job": "input",
+        "role": "Single-value control; type selects the widget.",
+        "variants": []
+      },
+      {
+        "slug": "button",
+        "elements": [
+          "button"
+        ],
+        "group": "forms",
+        "job": "input",
+        "role": "Clickable control.",
+        "variants": []
+      },
+      {
+        "slug": "label",
+        "elements": [
+          "label"
+        ],
+        "group": "forms",
+        "job": "input",
+        "role": "Caption bound to a control.",
+        "variants": [
+          "legend"
+        ]
+      },
+      {
+        "slug": "select",
+        "elements": [
+          "select"
+        ],
+        "group": "forms",
+        "job": "input",
+        "role": "Choose from a list of options.",
+        "variants": [
+          "datalist",
+          "selectedcontent"
+        ]
+      },
+      {
+        "slug": "option",
+        "elements": [
+          "option"
+        ],
+        "group": "forms",
+        "job": "input",
+        "role": "One choice in a select or datalist.",
+        "variants": [
+          "optgroup"
+        ]
+      },
+      {
+        "slug": "textarea",
+        "elements": [
+          "textarea"
+        ],
+        "group": "forms",
+        "job": "input",
+        "role": "Multi-line text control.",
+        "variants": []
+      },
+      {
+        "slug": "details",
+        "elements": [
+          "details"
+        ],
+        "group": "interactive",
+        "job": "built-in-behavior",
+        "role": "Disclosure widget with no script.",
+        "variants": [
+          "summary"
+        ]
+      },
+      {
+        "slug": "dialog",
+        "elements": [
+          "dialog"
+        ],
+        "group": "interactive",
+        "job": "built-in-behavior",
+        "role": "Modal or non-modal dialog with focus handling built in.",
+        "variants": []
+      },
+      {
+        "slug": "script",
+        "elements": [
+          "script"
+        ],
+        "group": "scripting",
+        "job": "code",
+        "role": "Executable code or data block.",
+        "variants": [
+          "noscript"
+        ]
+      },
+      {
+        "slug": "template",
+        "elements": [
+          "template"
+        ],
+        "group": "scripting",
+        "job": "code",
+        "role": "Inert markup to clone later.",
+        "variants": []
+      },
+      {
+        "slug": "slot",
+        "elements": [
+          "slot"
+        ],
+        "group": "scripting",
+        "job": "code",
+        "role": "Insertion point in a shadow tree.",
+        "variants": []
+      }
+    ],
+    "reduces_to": {
+      "title": {
+        "main": "meta",
+        "why": "Document-level text metadata: the document's name."
+      },
+      "base": {
+        "main": "link",
+        "why": "Document-level URL configuration for links and forms."
+      },
+      "style": {
+        "main": "link",
+        "why": "Inline counterpart of link rel=stylesheet."
+      },
+      "article": {
+        "main": "section",
+        "why": "Section that is self-contained and syndicatable."
+      },
+      "nav": {
+        "main": "section",
+        "why": "Section with the navigation landmark role."
+      },
+      "aside": {
+        "main": "section",
+        "why": "Section with the complementary landmark role."
+      },
+      "header": {
+        "main": "section",
+        "why": "Section introducing its parent; banner landmark at page level."
+      },
+      "footer": {
+        "main": "section",
+        "why": "Section closing its parent; contentinfo landmark at page level."
+      },
+      "main": {
+        "main": "section",
+        "why": "Section with the main landmark role; one per page."
+      },
+      "search": {
+        "main": "section",
+        "why": "Section with the search landmark role."
+      },
+      "address": {
+        "main": "section",
+        "why": "Section holding contact information for its parent."
+      },
+      "hgroup": {
+        "main": "heading",
+        "why": "Heading grouped with its subheading paragraphs."
+      },
+      "hr": {
+        "main": "p",
+        "why": "Paragraph-level thematic break with no content."
+      },
+      "blockquote": {
+        "main": "div",
+        "why": "Block container labelled as quoted from elsewhere."
+      },
+      "figure": {
+        "main": "div",
+        "why": "Block container labelled as a self-contained figure."
+      },
+      "figcaption": {
+        "main": "p",
+        "why": "Caption paragraph for a figure."
+      },
+      "menu": {
+        "main": "list",
+        "why": "Unordered list of commands."
+      },
+      "dl": {
+        "main": "list",
+        "why": "List whose items are name-value groups."
+      },
+      "dt": {
+        "main": "li",
+        "why": "List item holding the name of a name-value group."
+      },
+      "dd": {
+        "main": "li",
+        "why": "List item holding the value of a name-value group."
+      },
+      "em": {
+        "main": "span",
+        "why": "Inline with stress emphasis."
+      },
+      "strong": {
+        "main": "span",
+        "why": "Inline with importance."
+      },
+      "small": {
+        "main": "span",
+        "why": "Inline side comment."
+      },
+      "s": {
+        "main": "span",
+        "why": "Inline that is no longer accurate."
+      },
+      "cite": {
+        "main": "span",
+        "why": "Inline title of a work."
+      },
+      "q": {
+        "main": "span",
+        "why": "Inline quotation."
+      },
+      "dfn": {
+        "main": "span",
+        "why": "Inline defining instance of a term."
+      },
+      "abbr": {
+        "main": "span",
+        "why": "Inline abbreviation with an expansion."
+      },
+      "ruby": {
+        "main": "span",
+        "why": "Inline with ruby annotations attached."
+      },
+      "rt": {
+        "main": "span",
+        "why": "Inline ruby annotation text."
+      },
+      "rp": {
+        "main": "span",
+        "why": "Inline fallback parenthesis for ruby."
+      },
+      "data": {
+        "main": "span",
+        "why": "Inline with a machine-readable value."
+      },
+      "time": {
+        "main": "span",
+        "why": "Inline with a machine-readable date or time."
+      },
+      "code": {
+        "main": "span",
+        "why": "Inline computer code."
+      },
+      "var": {
+        "main": "span",
+        "why": "Inline variable."
+      },
+      "samp": {
+        "main": "span",
+        "why": "Inline program output."
+      },
+      "kbd": {
+        "main": "span",
+        "why": "Inline user input."
+      },
+      "sub": {
+        "main": "span",
+        "why": "Inline subscript."
+      },
+      "sup": {
+        "main": "span",
+        "why": "Inline superscript."
+      },
+      "i": {
+        "main": "span",
+        "why": "Inline alternate voice or mood."
+      },
+      "b": {
+        "main": "span",
+        "why": "Inline keyword drawn to attention."
+      },
+      "u": {
+        "main": "span",
+        "why": "Inline unarticulated annotation."
+      },
+      "mark": {
+        "main": "span",
+        "why": "Inline highlighted for reference."
+      },
+      "bdi": {
+        "main": "span",
+        "why": "Inline with isolated text direction."
+      },
+      "bdo": {
+        "main": "span",
+        "why": "Inline with overridden text direction."
+      },
+      "ins": {
+        "main": "span",
+        "why": "Inline or block marked as added in an edit."
+      },
+      "del": {
+        "main": "span",
+        "why": "Inline or block marked as removed in an edit."
+      },
+      "wbr": {
+        "main": "br",
+        "why": "Optional line-break opportunity instead of a forced break."
+      },
+      "picture": {
+        "main": "img",
+        "why": "img with alternative sources chosen by the browser."
+      },
+      "track": {
+        "main": "source",
+        "why": "Timed-text alternative for a media element."
+      },
+      "embed": {
+        "main": "iframe",
+        "why": "External content handled by a plugin instead of a document."
+      },
+      "object": {
+        "main": "iframe",
+        "why": "External resource with fallback; image, document, or plugin."
+      },
+      "map": {
+        "main": "img",
+        "why": "Clickable regions laid over an image."
+      },
+      "area": {
+        "main": "a",
+        "why": "Hyperlink bound to a region of an image."
+      },
+      "svg": {
+        "main": "canvas",
+        "why": "Drawn graphics described as vectors instead of scripted pixels."
+      },
+      "math": {
+        "main": "span",
+        "why": "Phrasing-level mathematical markup from another vocabulary."
+      },
+      "caption": {
+        "main": "table",
+        "why": "Optional title structure of a table."
+      },
+      "colgroup": {
+        "main": "table",
+        "why": "Optional column structure of a table."
+      },
+      "col": {
+        "main": "table",
+        "why": "Optional column structure of a table."
+      },
+      "thead": {
+        "main": "table",
+        "why": "Optional row-group structure of a table."
+      },
+      "tbody": {
+        "main": "table",
+        "why": "Optional row-group structure of a table."
+      },
+      "tfoot": {
+        "main": "table",
+        "why": "Optional row-group structure of a table."
+      },
+      "datalist": {
+        "main": "select",
+        "why": "Option list offered as suggestions to an input."
+      },
+      "optgroup": {
+        "main": "option",
+        "why": "Labelled group of options."
+      },
+      "selectedcontent": {
+        "main": "select",
+        "why": "Mirror of the chosen option inside a customizable select."
+      },
+      "fieldset": {
+        "main": "form",
+        "why": "Named sub-group of a form's controls."
+      },
+      "legend": {
+        "main": "label",
+        "why": "Caption for a fieldset instead of a single control."
+      },
+      "output": {
+        "main": "span",
+        "why": "Display-only form extra: a calculated result."
+      },
+      "progress": {
+        "main": "span",
+        "why": "Display-only form extra: task completion."
+      },
+      "meter": {
+        "main": "span",
+        "why": "Display-only form extra: a gauge within a range."
+      },
+      "summary": {
+        "main": "details",
+        "why": "The always-visible caption of a details widget."
+      },
+      "noscript": {
+        "main": "script",
+        "why": "Fallback shown when script does not run."
+      }
+    },
+    "views": [
+      "MAIN-ELEMENTS.md",
+      "CATEGORIES.md",
+      "GROUPS.md"
+    ]
+  },
+  "primitives": [
+    {
+      "id": "html.element.a",
+      "kind": "element",
+      "name": "a",
+      "path": "elements/a/primitive.json",
+      "readme": "elements/a/README.md",
+      "description": "Hyperlink",
+      "interface": "HTMLAnchorElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Interactive",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "a",
+      "is_main": true
+    },
+    {
+      "id": "html.element.abbr",
+      "kind": "element",
+      "name": "abbr",
+      "path": "elements/abbr/primitive.json",
+      "readme": "elements/abbr/README.md",
+      "description": "Abbreviation",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.address",
+      "kind": "element",
+      "name": "address",
+      "path": "elements/address/primitive.json",
+      "readme": "elements/address/README.md",
+      "description": "Contact information for a page or article element",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "section",
+      "is_main": false
+    },
+    {
+      "id": "html.element.area",
+      "kind": "element",
+      "name": "area",
+      "path": "elements/area/primitive.json",
+      "readme": "elements/area/README.md",
+      "description": "Hyperlink or dead area on an image map",
+      "interface": "HTMLAreaElement",
+      "syntax": "void",
+      "categories": [
+        "Flow",
+        "Phrasing"
+      ],
+      "group": "embedded",
+      "main_primitive": "a",
+      "is_main": false
+    },
+    {
+      "id": "html.element.article",
+      "kind": "element",
+      "name": "article",
+      "path": "elements/article/primitive.json",
+      "readme": "elements/article/README.md",
+      "description": "Self-contained syndicatable or reusable composition",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Sectioning",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "section",
+      "is_main": false
+    },
+    {
+      "id": "html.element.aside",
+      "kind": "element",
+      "name": "aside",
+      "path": "elements/aside/primitive.json",
+      "readme": "elements/aside/README.md",
+      "description": "Sidebar for tangentially related content",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Sectioning",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "section",
+      "is_main": false
+    },
+    {
+      "id": "html.element.audio",
+      "kind": "element",
+      "name": "audio",
+      "path": "elements/audio/primitive.json",
+      "readme": "elements/audio/README.md",
+      "description": "Audio player",
+      "interface": "HTMLAudioElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Interactive",
+        "Palpable"
+      ],
+      "group": "embedded",
+      "main_primitive": "audio",
+      "is_main": true
+    },
+    {
+      "id": "html.element.b",
+      "kind": "element",
+      "name": "b",
+      "path": "elements/b/primitive.json",
+      "readme": "elements/b/README.md",
+      "description": "Keywords",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.base",
+      "kind": "element",
+      "name": "base",
+      "path": "elements/base/primitive.json",
+      "readme": "elements/base/README.md",
+      "description": "Base URL and default target navigable for hyperlinks and forms",
+      "interface": "HTMLBaseElement",
+      "syntax": "void",
+      "categories": [
+        "Metadata"
+      ],
+      "group": "document-metadata",
+      "main_primitive": "link",
+      "is_main": false
+    },
+    {
+      "id": "html.element.bdi",
+      "kind": "element",
+      "name": "bdi",
+      "path": "elements/bdi/primitive.json",
+      "readme": "elements/bdi/README.md",
+      "description": "Text directionality isolation",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.bdo",
+      "kind": "element",
+      "name": "bdo",
+      "path": "elements/bdo/primitive.json",
+      "readme": "elements/bdo/README.md",
+      "description": "Text directionality formatting",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.blockquote",
+      "kind": "element",
+      "name": "blockquote",
+      "path": "elements/blockquote/primitive.json",
+      "readme": "elements/blockquote/README.md",
+      "description": "A section quoted from another source",
+      "interface": "HTMLQuoteElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "div",
+      "is_main": false
+    },
+    {
+      "id": "html.element.body",
+      "kind": "element",
+      "name": "body",
+      "path": "elements/body/primitive.json",
+      "readme": "elements/body/README.md",
+      "description": "Document body",
+      "interface": "HTMLBodyElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "sections",
+      "main_primitive": "body",
+      "is_main": true
+    },
+    {
+      "id": "html.element.br",
+      "kind": "element",
+      "name": "br",
+      "path": "elements/br/primitive.json",
+      "readme": "elements/br/README.md",
+      "description": "Line break, e.g. in poem or postal address",
+      "interface": "HTMLBRElement",
+      "syntax": "void",
+      "categories": [
+        "Flow",
+        "Phrasing"
+      ],
+      "group": "text-level",
+      "main_primitive": "br",
+      "is_main": true
+    },
+    {
+      "id": "html.element.button",
+      "kind": "element",
+      "name": "button",
+      "path": "elements/button/primitive.json",
+      "readme": "elements/button/README.md",
+      "description": "Button control",
+      "interface": "HTMLButtonElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Interactive",
+        "Palpable",
+        "Form-associated",
+        "listed",
+        "submittable",
+        "autocapitalize-and-autocorrect-inheriting",
+        "labelable"
+      ],
+      "group": "forms",
+      "main_primitive": "button",
+      "is_main": true
+    },
+    {
+      "id": "html.element.canvas",
+      "kind": "element",
+      "name": "canvas",
+      "path": "elements/canvas/primitive.json",
+      "readme": "elements/canvas/README.md",
+      "description": "Scriptable bitmap canvas",
+      "interface": "HTMLCanvasElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Palpable"
+      ],
+      "group": "scripting",
+      "main_primitive": "canvas",
+      "is_main": true
+    },
+    {
+      "id": "html.element.caption",
+      "kind": "element",
+      "name": "caption",
+      "path": "elements/caption/primitive.json",
+      "readme": "elements/caption/README.md",
+      "description": "Table caption",
+      "interface": "HTMLTableCaptionElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "tables",
+      "main_primitive": "table",
+      "is_main": false
+    },
+    {
+      "id": "html.element.cite",
+      "kind": "element",
+      "name": "cite",
+      "path": "elements/cite/primitive.json",
+      "readme": "elements/cite/README.md",
+      "description": "Title of a work",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.code",
+      "kind": "element",
+      "name": "code",
+      "path": "elements/code/primitive.json",
+      "readme": "elements/code/README.md",
+      "description": "Computer code",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.col",
+      "kind": "element",
+      "name": "col",
+      "path": "elements/col/primitive.json",
+      "readme": "elements/col/README.md",
+      "description": "Table column",
+      "interface": "HTMLTableColElement",
+      "syntax": "void",
+      "categories": [],
+      "group": "tables",
+      "main_primitive": "table",
+      "is_main": false
+    },
+    {
+      "id": "html.element.colgroup",
+      "kind": "element",
+      "name": "colgroup",
+      "path": "elements/colgroup/primitive.json",
+      "readme": "elements/colgroup/README.md",
+      "description": "Group of columns in a table",
+      "interface": "HTMLTableColElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "tables",
+      "main_primitive": "table",
+      "is_main": false
+    },
+    {
+      "id": "html.element.data",
+      "kind": "element",
+      "name": "data",
+      "path": "elements/data/primitive.json",
+      "readme": "elements/data/README.md",
+      "description": "Machine-readable equivalent",
+      "interface": "HTMLDataElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.datalist",
+      "kind": "element",
+      "name": "datalist",
+      "path": "elements/datalist/primitive.json",
+      "readme": "elements/datalist/README.md",
+      "description": "Container for options for combo box control",
+      "interface": "HTMLDataListElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing"
+      ],
+      "group": "forms",
+      "main_primitive": "select",
+      "is_main": false
+    },
+    {
+      "id": "html.element.dd",
+      "kind": "element",
+      "name": "dd",
+      "path": "elements/dd/primitive.json",
+      "readme": "elements/dd/README.md",
+      "description": "Content for corresponding dt element(s)",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "grouping-content",
+      "main_primitive": "li",
+      "is_main": false
+    },
+    {
+      "id": "html.element.del",
+      "kind": "element",
+      "name": "del",
+      "path": "elements/del/primitive.json",
+      "readme": "elements/del/README.md",
+      "description": "A removal from the document",
+      "interface": "HTMLModElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "edits",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.details",
+      "kind": "element",
+      "name": "details",
+      "path": "elements/details/primitive.json",
+      "readme": "elements/details/README.md",
+      "description": "Disclosure control for hiding details",
+      "interface": "HTMLDetailsElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Interactive",
+        "Palpable"
+      ],
+      "group": "interactive",
+      "main_primitive": "details",
+      "is_main": true
+    },
+    {
+      "id": "html.element.dfn",
+      "kind": "element",
+      "name": "dfn",
+      "path": "elements/dfn/primitive.json",
+      "readme": "elements/dfn/README.md",
+      "description": "Defining instance",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.dialog",
+      "kind": "element",
+      "name": "dialog",
+      "path": "elements/dialog/primitive.json",
+      "readme": "elements/dialog/README.md",
+      "description": "Dialog box or window",
+      "interface": "HTMLDialogElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow"
+      ],
+      "group": "interactive",
+      "main_primitive": "dialog",
+      "is_main": true
+    },
+    {
+      "id": "html.element.div",
+      "kind": "element",
+      "name": "div",
+      "path": "elements/div/primitive.json",
+      "readme": "elements/div/README.md",
+      "description": "Generic flow container, or container for name-value groups in dl elements",
+      "interface": "HTMLDivElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "div",
+      "is_main": true
+    },
+    {
+      "id": "html.element.dl",
+      "kind": "element",
+      "name": "dl",
+      "path": "elements/dl/primitive.json",
+      "readme": "elements/dl/README.md",
+      "description": "Association list consisting of zero or more name-value groups",
+      "interface": "HTMLDListElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "list",
+      "is_main": false
+    },
+    {
+      "id": "html.element.dt",
+      "kind": "element",
+      "name": "dt",
+      "path": "elements/dt/primitive.json",
+      "readme": "elements/dt/README.md",
+      "description": "Legend for corresponding dd element(s)",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "grouping-content",
+      "main_primitive": "li",
+      "is_main": false
+    },
+    {
+      "id": "html.element.em",
+      "kind": "element",
+      "name": "em",
+      "path": "elements/em/primitive.json",
+      "readme": "elements/em/README.md",
+      "description": "Stress emphasis",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.embed",
+      "kind": "element",
+      "name": "embed",
+      "path": "elements/embed/primitive.json",
+      "readme": "elements/embed/README.md",
+      "description": "Plugin",
+      "interface": "HTMLEmbedElement",
+      "syntax": "void",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Interactive",
+        "Palpable"
+      ],
+      "group": "embedded",
+      "main_primitive": "iframe",
+      "is_main": false
+    },
+    {
+      "id": "html.element.fieldset",
+      "kind": "element",
+      "name": "fieldset",
+      "path": "elements/fieldset/primitive.json",
+      "readme": "elements/fieldset/README.md",
+      "description": "Group of form controls",
+      "interface": "HTMLFieldSetElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable",
+        "Form-associated",
+        "listed",
+        "autocapitalize-and-autocorrect-inheriting"
+      ],
+      "group": "forms",
+      "main_primitive": "form",
+      "is_main": false
+    },
+    {
+      "id": "html.element.figcaption",
+      "kind": "element",
+      "name": "figcaption",
+      "path": "elements/figcaption/primitive.json",
+      "readme": "elements/figcaption/README.md",
+      "description": "Caption for figure",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "grouping-content",
+      "main_primitive": "p",
+      "is_main": false
+    },
+    {
+      "id": "html.element.figure",
+      "kind": "element",
+      "name": "figure",
+      "path": "elements/figure/primitive.json",
+      "readme": "elements/figure/README.md",
+      "description": "Figure with optional caption",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "div",
+      "is_main": false
+    },
+    {
+      "id": "html.element.footer",
+      "kind": "element",
+      "name": "footer",
+      "path": "elements/footer/primitive.json",
+      "readme": "elements/footer/README.md",
+      "description": "Footer for a page or section",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "section",
+      "is_main": false
+    },
+    {
+      "id": "html.element.form",
+      "kind": "element",
+      "name": "form",
+      "path": "elements/form/primitive.json",
+      "readme": "elements/form/README.md",
+      "description": "User-submittable form",
+      "interface": "HTMLFormElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "forms",
+      "main_primitive": "form",
+      "is_main": true
+    },
+    {
+      "id": "html.element.h1",
+      "kind": "element",
+      "name": "h1",
+      "path": "elements/h1/primitive.json",
+      "readme": "elements/h1/README.md",
+      "description": "Heading",
+      "interface": "HTMLHeadingElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Heading",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "heading",
+      "is_main": true
+    },
+    {
+      "id": "html.element.h2",
+      "kind": "element",
+      "name": "h2",
+      "path": "elements/h2/primitive.json",
+      "readme": "elements/h2/README.md",
+      "description": "Heading",
+      "interface": "HTMLHeadingElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Heading",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "heading",
+      "is_main": true
+    },
+    {
+      "id": "html.element.h3",
+      "kind": "element",
+      "name": "h3",
+      "path": "elements/h3/primitive.json",
+      "readme": "elements/h3/README.md",
+      "description": "Heading",
+      "interface": "HTMLHeadingElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Heading",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "heading",
+      "is_main": true
+    },
+    {
+      "id": "html.element.h4",
+      "kind": "element",
+      "name": "h4",
+      "path": "elements/h4/primitive.json",
+      "readme": "elements/h4/README.md",
+      "description": "Heading",
+      "interface": "HTMLHeadingElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Heading",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "heading",
+      "is_main": true
+    },
+    {
+      "id": "html.element.h5",
+      "kind": "element",
+      "name": "h5",
+      "path": "elements/h5/primitive.json",
+      "readme": "elements/h5/README.md",
+      "description": "Heading",
+      "interface": "HTMLHeadingElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Heading",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "heading",
+      "is_main": true
+    },
+    {
+      "id": "html.element.h6",
+      "kind": "element",
+      "name": "h6",
+      "path": "elements/h6/primitive.json",
+      "readme": "elements/h6/README.md",
+      "description": "Heading",
+      "interface": "HTMLHeadingElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Heading",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "heading",
+      "is_main": true
+    },
+    {
+      "id": "html.element.head",
+      "kind": "element",
+      "name": "head",
+      "path": "elements/head/primitive.json",
+      "readme": "elements/head/README.md",
+      "description": "Container for document metadata",
+      "interface": "HTMLHeadElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "document-metadata",
+      "main_primitive": "head",
+      "is_main": true
+    },
+    {
+      "id": "html.element.header",
+      "kind": "element",
+      "name": "header",
+      "path": "elements/header/primitive.json",
+      "readme": "elements/header/README.md",
+      "description": "Introductory or navigational aids for a page or section",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "section",
+      "is_main": false
+    },
+    {
+      "id": "html.element.hgroup",
+      "kind": "element",
+      "name": "hgroup",
+      "path": "elements/hgroup/primitive.json",
+      "readme": "elements/hgroup/README.md",
+      "description": "Heading container",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Heading",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "heading",
+      "is_main": false
+    },
+    {
+      "id": "html.element.hr",
+      "kind": "element",
+      "name": "hr",
+      "path": "elements/hr/primitive.json",
+      "readme": "elements/hr/README.md",
+      "description": "Thematic break",
+      "interface": "HTMLHRElement",
+      "syntax": "void",
+      "categories": [
+        "Flow"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "p",
+      "is_main": false
+    },
+    {
+      "id": "html.element.html",
+      "kind": "element",
+      "name": "html",
+      "path": "elements/html/primitive.json",
+      "readme": "elements/html/README.md",
+      "description": "Root element",
+      "interface": "HTMLHtmlElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "document-metadata",
+      "main_primitive": "html",
+      "is_main": true
+    },
+    {
+      "id": "html.element.i",
+      "kind": "element",
+      "name": "i",
+      "path": "elements/i/primitive.json",
+      "readme": "elements/i/README.md",
+      "description": "Alternate voice",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.iframe",
+      "kind": "element",
+      "name": "iframe",
+      "path": "elements/iframe/primitive.json",
+      "readme": "elements/iframe/README.md",
+      "description": "Child navigable",
+      "interface": "HTMLIFrameElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Interactive",
+        "Palpable"
+      ],
+      "group": "embedded",
+      "main_primitive": "iframe",
+      "is_main": true
+    },
+    {
+      "id": "html.element.img",
+      "kind": "element",
+      "name": "img",
+      "path": "elements/img/primitive.json",
+      "readme": "elements/img/README.md",
+      "description": "Image",
+      "interface": "HTMLImageElement",
+      "syntax": "void",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Interactive",
+        "Palpable",
+        "Form-associated"
+      ],
+      "group": "embedded",
+      "main_primitive": "img",
+      "is_main": true
+    },
+    {
+      "id": "html.element.input",
+      "kind": "element",
+      "name": "input",
+      "path": "elements/input/primitive.json",
+      "readme": "elements/input/README.md",
+      "description": "Form control",
+      "interface": "HTMLInputElement",
+      "syntax": "void",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Interactive",
+        "Palpable",
+        "Form-associated",
+        "listed",
+        "submittable",
+        "resettable",
+        "autocapitalize-and-autocorrect-inheriting",
+        "labelable"
+      ],
+      "group": "forms",
+      "main_primitive": "input",
+      "is_main": true
+    },
+    {
+      "id": "html.element.ins",
+      "kind": "element",
+      "name": "ins",
+      "path": "elements/ins/primitive.json",
+      "readme": "elements/ins/README.md",
+      "description": "An addition to the document",
+      "interface": "HTMLModElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "edits",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.kbd",
+      "kind": "element",
+      "name": "kbd",
+      "path": "elements/kbd/primitive.json",
+      "readme": "elements/kbd/README.md",
+      "description": "User input",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.label",
+      "kind": "element",
+      "name": "label",
+      "path": "elements/label/primitive.json",
+      "readme": "elements/label/README.md",
+      "description": "Caption for a form control",
+      "interface": "HTMLLabelElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Interactive",
+        "Palpable"
+      ],
+      "group": "forms",
+      "main_primitive": "label",
+      "is_main": true
+    },
+    {
+      "id": "html.element.legend",
+      "kind": "element",
+      "name": "legend",
+      "path": "elements/legend/primitive.json",
+      "readme": "elements/legend/README.md",
+      "description": "Caption for fieldset",
+      "interface": "HTMLLegendElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "forms",
+      "main_primitive": "label",
+      "is_main": false
+    },
+    {
+      "id": "html.element.li",
+      "kind": "element",
+      "name": "li",
+      "path": "elements/li/primitive.json",
+      "readme": "elements/li/README.md",
+      "description": "List item",
+      "interface": "HTMLLIElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "grouping-content",
+      "main_primitive": "li",
+      "is_main": true
+    },
+    {
+      "id": "html.element.link",
+      "kind": "element",
+      "name": "link",
+      "path": "elements/link/primitive.json",
+      "readme": "elements/link/README.md",
+      "description": "Link metadata",
+      "interface": "HTMLLinkElement",
+      "syntax": "void",
+      "categories": [
+        "Metadata",
+        "Flow",
+        "Phrasing"
+      ],
+      "group": "document-metadata",
+      "main_primitive": "link",
+      "is_main": true
+    },
+    {
+      "id": "html.element.main",
+      "kind": "element",
+      "name": "main",
+      "path": "elements/main/primitive.json",
+      "readme": "elements/main/README.md",
+      "description": "Container for the dominant contents of the document",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "section",
+      "is_main": false
+    },
+    {
+      "id": "html.element.map",
+      "kind": "element",
+      "name": "map",
+      "path": "elements/map/primitive.json",
+      "readme": "elements/map/README.md",
+      "description": "Image map",
+      "interface": "HTMLMapElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "embedded",
+      "main_primitive": "img",
+      "is_main": false
+    },
+    {
+      "id": "html.element.mark",
+      "kind": "element",
+      "name": "mark",
+      "path": "elements/mark/primitive.json",
+      "readme": "elements/mark/README.md",
+      "description": "Highlight",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.math",
+      "kind": "element",
+      "name": "math",
+      "path": "elements/math/primitive.json",
+      "readme": "elements/math/README.md",
+      "description": "MathML root",
+      "interface": "Element",
+      "syntax": "foreign",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Palpable"
+      ],
+      "group": "embedded",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.menu",
+      "kind": "element",
+      "name": "menu",
+      "path": "elements/menu/primitive.json",
+      "readme": "elements/menu/README.md",
+      "description": "Menu of commands",
+      "interface": "HTMLMenuElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "list",
+      "is_main": false
+    },
+    {
+      "id": "html.element.meta",
+      "kind": "element",
+      "name": "meta",
+      "path": "elements/meta/primitive.json",
+      "readme": "elements/meta/README.md",
+      "description": "Text metadata",
+      "interface": "HTMLMetaElement",
+      "syntax": "void",
+      "categories": [
+        "Metadata",
+        "Flow",
+        "Phrasing"
+      ],
+      "group": "document-metadata",
+      "main_primitive": "meta",
+      "is_main": true
+    },
+    {
+      "id": "html.element.meter",
+      "kind": "element",
+      "name": "meter",
+      "path": "elements/meter/primitive.json",
+      "readme": "elements/meter/README.md",
+      "description": "Gauge",
+      "interface": "HTMLMeterElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable",
+        "labelable"
+      ],
+      "group": "forms",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.nav",
+      "kind": "element",
+      "name": "nav",
+      "path": "elements/nav/primitive.json",
+      "readme": "elements/nav/README.md",
+      "description": "Section with navigational links",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Sectioning",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "section",
+      "is_main": false
+    },
+    {
+      "id": "html.element.noscript",
+      "kind": "element",
+      "name": "noscript",
+      "path": "elements/noscript/primitive.json",
+      "readme": "elements/noscript/README.md",
+      "description": "Fallback content for script",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Metadata",
+        "Flow",
+        "Phrasing"
+      ],
+      "group": "scripting",
+      "main_primitive": "script",
+      "is_main": false
+    },
+    {
+      "id": "html.element.object",
+      "kind": "element",
+      "name": "object",
+      "path": "elements/object/primitive.json",
+      "readme": "elements/object/README.md",
+      "description": "Image, child navigable , or plugin",
+      "interface": "HTMLObjectElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Palpable",
+        "Form-associated",
+        "listed"
+      ],
+      "group": "embedded",
+      "main_primitive": "iframe",
+      "is_main": false
+    },
+    {
+      "id": "html.element.ol",
+      "kind": "element",
+      "name": "ol",
+      "path": "elements/ol/primitive.json",
+      "readme": "elements/ol/README.md",
+      "description": "Ordered list",
+      "interface": "HTMLOListElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "list",
+      "is_main": true
+    },
+    {
+      "id": "html.element.optgroup",
+      "kind": "element",
+      "name": "optgroup",
+      "path": "elements/optgroup/primitive.json",
+      "readme": "elements/optgroup/README.md",
+      "description": "Group of options in a list box",
+      "interface": "HTMLOptGroupElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "forms",
+      "main_primitive": "option",
+      "is_main": false
+    },
+    {
+      "id": "html.element.option",
+      "kind": "element",
+      "name": "option",
+      "path": "elements/option/primitive.json",
+      "readme": "elements/option/README.md",
+      "description": "Option in a list box or combo box control",
+      "interface": "HTMLOptionElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "forms",
+      "main_primitive": "option",
+      "is_main": true
+    },
+    {
+      "id": "html.element.output",
+      "kind": "element",
+      "name": "output",
+      "path": "elements/output/primitive.json",
+      "readme": "elements/output/README.md",
+      "description": "Calculated output value",
+      "interface": "HTMLOutputElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable",
+        "Form-associated",
+        "listed",
+        "resettable",
+        "autocapitalize-and-autocorrect-inheriting",
+        "labelable"
+      ],
+      "group": "forms",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.p",
+      "kind": "element",
+      "name": "p",
+      "path": "elements/p/primitive.json",
+      "readme": "elements/p/README.md",
+      "description": "Paragraph",
+      "interface": "HTMLParagraphElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "p",
+      "is_main": true
+    },
+    {
+      "id": "html.element.picture",
+      "kind": "element",
+      "name": "picture",
+      "path": "elements/picture/primitive.json",
+      "readme": "elements/picture/README.md",
+      "description": "Image",
+      "interface": "HTMLPictureElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Palpable"
+      ],
+      "group": "embedded",
+      "main_primitive": "img",
+      "is_main": false
+    },
+    {
+      "id": "html.element.pre",
+      "kind": "element",
+      "name": "pre",
+      "path": "elements/pre/primitive.json",
+      "readme": "elements/pre/README.md",
+      "description": "Block of preformatted text",
+      "interface": "HTMLPreElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "pre",
+      "is_main": true
+    },
+    {
+      "id": "html.element.progress",
+      "kind": "element",
+      "name": "progress",
+      "path": "elements/progress/primitive.json",
+      "readme": "elements/progress/README.md",
+      "description": "Progress bar",
+      "interface": "HTMLProgressElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable",
+        "labelable"
+      ],
+      "group": "forms",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.q",
+      "kind": "element",
+      "name": "q",
+      "path": "elements/q/primitive.json",
+      "readme": "elements/q/README.md",
+      "description": "Quotation",
+      "interface": "HTMLQuoteElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.rp",
+      "kind": "element",
+      "name": "rp",
+      "path": "elements/rp/primitive.json",
+      "readme": "elements/rp/README.md",
+      "description": "Parenthesis for ruby annotation text",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.rt",
+      "kind": "element",
+      "name": "rt",
+      "path": "elements/rt/primitive.json",
+      "readme": "elements/rt/README.md",
+      "description": "Ruby annotation text",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.ruby",
+      "kind": "element",
+      "name": "ruby",
+      "path": "elements/ruby/primitive.json",
+      "readme": "elements/ruby/README.md",
+      "description": "Ruby annotation(s)",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.s",
+      "kind": "element",
+      "name": "s",
+      "path": "elements/s/primitive.json",
+      "readme": "elements/s/README.md",
+      "description": "Inaccurate text",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.samp",
+      "kind": "element",
+      "name": "samp",
+      "path": "elements/samp/primitive.json",
+      "readme": "elements/samp/README.md",
+      "description": "Computer output",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.script",
+      "kind": "element",
+      "name": "script",
+      "path": "elements/script/primitive.json",
+      "readme": "elements/script/README.md",
+      "description": "Embedded script",
+      "interface": "HTMLScriptElement",
+      "syntax": "raw text",
+      "categories": [
+        "Metadata",
+        "Flow",
+        "Phrasing",
+        "Script-supporting"
+      ],
+      "group": "scripting",
+      "main_primitive": "script",
+      "is_main": true
+    },
+    {
+      "id": "html.element.search",
+      "kind": "element",
+      "name": "search",
+      "path": "elements/search/primitive.json",
+      "readme": "elements/search/README.md",
+      "description": "Container for search controls",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "section",
+      "is_main": false
+    },
+    {
+      "id": "html.element.section",
+      "kind": "element",
+      "name": "section",
+      "path": "elements/section/primitive.json",
+      "readme": "elements/section/README.md",
+      "description": "Generic document or application section",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Sectioning",
+        "Palpable"
+      ],
+      "group": "sections",
+      "main_primitive": "section",
+      "is_main": true
+    },
+    {
+      "id": "html.element.select",
+      "kind": "element",
+      "name": "select",
+      "path": "elements/select/primitive.json",
+      "readme": "elements/select/README.md",
+      "description": "List box control",
+      "interface": "HTMLSelectElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Interactive",
+        "Palpable",
+        "Form-associated",
+        "listed",
+        "submittable",
+        "resettable",
+        "autocapitalize-and-autocorrect-inheriting",
+        "labelable"
+      ],
+      "group": "forms",
+      "main_primitive": "select",
+      "is_main": true
+    },
+    {
+      "id": "html.element.selectedcontent",
+      "kind": "element",
+      "name": "selectedcontent",
+      "path": "elements/selectedcontent/primitive.json",
+      "readme": "elements/selectedcontent/README.md",
+      "description": "Mirrors content from an option",
+      "interface": "HTMLSelectedContentElement",
+      "syntax": "normal",
+      "categories": [
+        "Phrasing"
+      ],
+      "group": "forms",
+      "main_primitive": "select",
+      "is_main": false
+    },
+    {
+      "id": "html.element.slot",
+      "kind": "element",
+      "name": "slot",
+      "path": "elements/slot/primitive.json",
+      "readme": "elements/slot/README.md",
+      "description": "Shadow tree slot",
+      "interface": "HTMLSlotElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing"
+      ],
+      "group": "scripting",
+      "main_primitive": "slot",
+      "is_main": true
+    },
+    {
+      "id": "html.element.small",
+      "kind": "element",
+      "name": "small",
+      "path": "elements/small/primitive.json",
+      "readme": "elements/small/README.md",
+      "description": "Side comment",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.source",
+      "kind": "element",
+      "name": "source",
+      "path": "elements/source/primitive.json",
+      "readme": "elements/source/README.md",
+      "description": "Image source for img or media source for video or audio",
+      "interface": "HTMLSourceElement",
+      "syntax": "void",
+      "categories": [],
+      "group": "embedded",
+      "main_primitive": "source",
+      "is_main": true
+    },
+    {
+      "id": "html.element.span",
+      "kind": "element",
+      "name": "span",
+      "path": "elements/span/primitive.json",
+      "readme": "elements/span/README.md",
+      "description": "Generic phrasing container",
+      "interface": "HTMLSpanElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": true
+    },
+    {
+      "id": "html.element.strong",
+      "kind": "element",
+      "name": "strong",
+      "path": "elements/strong/primitive.json",
+      "readme": "elements/strong/README.md",
+      "description": "Importance",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.style",
+      "kind": "element",
+      "name": "style",
+      "path": "elements/style/primitive.json",
+      "readme": "elements/style/README.md",
+      "description": "Embedded styling information",
+      "interface": "HTMLStyleElement",
+      "syntax": "raw text",
+      "categories": [
+        "Metadata",
+        "Flow"
+      ],
+      "group": "document-metadata",
+      "main_primitive": "link",
+      "is_main": false
+    },
+    {
+      "id": "html.element.sub",
+      "kind": "element",
+      "name": "sub",
+      "path": "elements/sub/primitive.json",
+      "readme": "elements/sub/README.md",
+      "description": "Subscript",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.summary",
+      "kind": "element",
+      "name": "summary",
+      "path": "elements/summary/primitive.json",
+      "readme": "elements/summary/README.md",
+      "description": "Caption for details",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "interactive",
+      "main_primitive": "details",
+      "is_main": false
+    },
+    {
+      "id": "html.element.sup",
+      "kind": "element",
+      "name": "sup",
+      "path": "elements/sup/primitive.json",
+      "readme": "elements/sup/README.md",
+      "description": "Superscript",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.svg",
+      "kind": "element",
+      "name": "svg",
+      "path": "elements/svg/primitive.json",
+      "readme": "elements/svg/README.md",
+      "description": "SVG root",
+      "interface": "SVGSVGElement",
+      "syntax": "foreign",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Palpable"
+      ],
+      "group": "embedded",
+      "main_primitive": "canvas",
+      "is_main": false
+    },
+    {
+      "id": "html.element.table",
+      "kind": "element",
+      "name": "table",
+      "path": "elements/table/primitive.json",
+      "readme": "elements/table/README.md",
+      "description": "Table",
+      "interface": "HTMLTableElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "tables",
+      "main_primitive": "table",
+      "is_main": true
+    },
+    {
+      "id": "html.element.tbody",
+      "kind": "element",
+      "name": "tbody",
+      "path": "elements/tbody/primitive.json",
+      "readme": "elements/tbody/README.md",
+      "description": "Group of rows in a table",
+      "interface": "HTMLTableSectionElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "tables",
+      "main_primitive": "table",
+      "is_main": false
+    },
+    {
+      "id": "html.element.td",
+      "kind": "element",
+      "name": "td",
+      "path": "elements/td/primitive.json",
+      "readme": "elements/td/README.md",
+      "description": "Table cell",
+      "interface": "HTMLTableCellElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "tables",
+      "main_primitive": "cell",
+      "is_main": true
+    },
+    {
+      "id": "html.element.template",
+      "kind": "element",
+      "name": "template",
+      "path": "elements/template/primitive.json",
+      "readme": "elements/template/README.md",
+      "description": "Template",
+      "interface": "HTMLTemplateElement",
+      "syntax": "template",
+      "categories": [
+        "Metadata",
+        "Flow",
+        "Phrasing",
+        "Script-supporting"
+      ],
+      "group": "scripting",
+      "main_primitive": "template",
+      "is_main": true
+    },
+    {
+      "id": "html.element.textarea",
+      "kind": "element",
+      "name": "textarea",
+      "path": "elements/textarea/primitive.json",
+      "readme": "elements/textarea/README.md",
+      "description": "Multiline text controls",
+      "interface": "HTMLTextAreaElement",
+      "syntax": "escapable raw text",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Interactive",
+        "Palpable",
+        "Form-associated",
+        "listed",
+        "submittable",
+        "resettable",
+        "autocapitalize-and-autocorrect-inheriting",
+        "labelable"
+      ],
+      "group": "forms",
+      "main_primitive": "textarea",
+      "is_main": true
+    },
+    {
+      "id": "html.element.tfoot",
+      "kind": "element",
+      "name": "tfoot",
+      "path": "elements/tfoot/primitive.json",
+      "readme": "elements/tfoot/README.md",
+      "description": "Group of footer rows in a table",
+      "interface": "HTMLTableSectionElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "tables",
+      "main_primitive": "table",
+      "is_main": false
+    },
+    {
+      "id": "html.element.th",
+      "kind": "element",
+      "name": "th",
+      "path": "elements/th/primitive.json",
+      "readme": "elements/th/README.md",
+      "description": "Table header cell",
+      "interface": "HTMLTableCellElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "tables",
+      "main_primitive": "cell",
+      "is_main": true
+    },
+    {
+      "id": "html.element.thead",
+      "kind": "element",
+      "name": "thead",
+      "path": "elements/thead/primitive.json",
+      "readme": "elements/thead/README.md",
+      "description": "Group of heading rows in a table",
+      "interface": "HTMLTableSectionElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "tables",
+      "main_primitive": "table",
+      "is_main": false
+    },
+    {
+      "id": "html.element.time",
+      "kind": "element",
+      "name": "time",
+      "path": "elements/time/primitive.json",
+      "readme": "elements/time/README.md",
+      "description": "Machine-readable equivalent of date- or time-related data",
+      "interface": "HTMLTimeElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.title",
+      "kind": "element",
+      "name": "title",
+      "path": "elements/title/primitive.json",
+      "readme": "elements/title/README.md",
+      "description": "Document title",
+      "interface": "HTMLTitleElement",
+      "syntax": "escapable raw text",
+      "categories": [
+        "Metadata"
+      ],
+      "group": "document-metadata",
+      "main_primitive": "meta",
+      "is_main": false
+    },
+    {
+      "id": "html.element.tr",
+      "kind": "element",
+      "name": "tr",
+      "path": "elements/tr/primitive.json",
+      "readme": "elements/tr/README.md",
+      "description": "Table row",
+      "interface": "HTMLTableRowElement",
+      "syntax": "normal",
+      "categories": [],
+      "group": "tables",
+      "main_primitive": "tr",
+      "is_main": true
+    },
+    {
+      "id": "html.element.track",
+      "kind": "element",
+      "name": "track",
+      "path": "elements/track/primitive.json",
+      "readme": "elements/track/README.md",
+      "description": "Timed text track",
+      "interface": "HTMLTrackElement",
+      "syntax": "void",
+      "categories": [],
+      "group": "embedded",
+      "main_primitive": "source",
+      "is_main": false
+    },
+    {
+      "id": "html.element.u",
+      "kind": "element",
+      "name": "u",
+      "path": "elements/u/primitive.json",
+      "readme": "elements/u/README.md",
+      "description": "Unarticulated annotation",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.ul",
+      "kind": "element",
+      "name": "ul",
+      "path": "elements/ul/primitive.json",
+      "readme": "elements/ul/README.md",
+      "description": "List",
+      "interface": "HTMLUListElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Palpable"
+      ],
+      "group": "grouping-content",
+      "main_primitive": "list",
+      "is_main": true
+    },
+    {
+      "id": "html.element.var",
+      "kind": "element",
+      "name": "var",
+      "path": "elements/var/primitive.json",
+      "readme": "elements/var/README.md",
+      "description": "Variable",
+      "interface": "HTMLElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Palpable"
+      ],
+      "group": "text-level",
+      "main_primitive": "span",
+      "is_main": false
+    },
+    {
+      "id": "html.element.video",
+      "kind": "element",
+      "name": "video",
+      "path": "elements/video/primitive.json",
+      "readme": "elements/video/README.md",
+      "description": "Video player",
+      "interface": "HTMLVideoElement",
+      "syntax": "normal",
+      "categories": [
+        "Flow",
+        "Phrasing",
+        "Embedded",
+        "Interactive",
+        "Palpable"
+      ],
+      "group": "embedded",
+      "main_primitive": "video",
+      "is_main": true
+    },
+    {
+      "id": "html.element.wbr",
+      "kind": "element",
+      "name": "wbr",
+      "path": "elements/wbr/primitive.json",
+      "readme": "elements/wbr/README.md",
+      "description": "Line breaking opportunity",
+      "interface": "HTMLElement",
+      "syntax": "void",
+      "categories": [
+        "Flow",
+        "Phrasing"
+      ],
+      "group": "text-level",
+      "main_primitive": "br",
+      "is_main": false
+    },
+    {
+      "id": "dom.node.element",
+      "kind": "node",
+      "name": "Element",
+      "path": "nodes/element/primitive.json",
+      "readme": "nodes/element/README.md",
+      "description": "Element node, including HTML, SVG, and MathML elements.",
+      "nodeType": 1
+    },
+    {
+      "id": "dom.node.attr",
+      "kind": "node",
+      "name": "Attr",
+      "path": "nodes/attr/primitive.json",
+      "readme": "nodes/attr/README.md",
+      "description": "Attribute node; associated with an element, not a child in the node tree.",
+      "nodeType": 2
+    },
+    {
+      "id": "dom.node.text",
+      "kind": "node",
+      "name": "Text",
+      "path": "nodes/text/primitive.json",
+      "readme": "nodes/text/README.md",
+      "description": "Character data node.",
+      "nodeType": 3
+    },
+    {
+      "id": "dom.node.cdata-section",
+      "kind": "node",
+      "name": "CDATASection",
+      "path": "nodes/cdata-section/primitive.json",
+      "readme": "nodes/cdata-section/README.md",
+      "description": "XML-only CDATA node, a subtype of Text. In text/html, CDATA syntax is permitted inside foreign content but parses into Text nodes, not CDATASection nodes.",
+      "nodeType": 4
+    },
+    {
+      "id": "dom.node.processing-instruction",
+      "kind": "node",
+      "name": "ProcessingInstruction",
+      "path": "nodes/processing-instruction/primitive.json",
+      "readme": "nodes/processing-instruction/README.md",
+      "description": "XML serialization node; text/html does not serialize processing-instruction nodes. DOM APIs can create ProcessingInstruction objects even for an HTML document, so XML-only describes syntax use, not all possible API-created objects.",
+      "nodeType": 7
+    },
+    {
+      "id": "dom.node.comment",
+      "kind": "node",
+      "name": "Comment",
+      "path": "nodes/comment/primitive.json",
+      "readme": "nodes/comment/README.md",
+      "description": "Comment node.",
+      "nodeType": 8
+    },
+    {
+      "id": "dom.node.document",
+      "kind": "node",
+      "name": "Document",
+      "path": "nodes/document/primitive.json",
+      "readme": "nodes/document/README.md",
+      "description": "Document node.",
+      "nodeType": 9
+    },
+    {
+      "id": "dom.node.document-type",
+      "kind": "node",
+      "name": "DocumentType",
+      "path": "nodes/document-type/primitive.json",
+      "readme": "nodes/document-type/README.md",
+      "description": "Document type declaration node.",
+      "nodeType": 10
+    },
+    {
+      "id": "dom.node.document-fragment",
+      "kind": "node",
+      "name": "DocumentFragment",
+      "path": "nodes/document-fragment/primitive.json",
+      "readme": "nodes/document-fragment/README.md",
+      "description": "Fragment node; ShadowRoot is a specialized DocumentFragment, not a separate nodeType.",
+      "nodeType": 11
+    },
+    {
+      "id": "html.custom-element",
+      "kind": "custom-element",
+      "name": "custom element",
+      "path": "custom-elements/primitive.json",
+      "readme": "custom-elements/README.md",
+      "description": "Any element whose custom element name is a valid hyphenated name registered through customElements.define(). Names cannot be enumerated, so one primitive covers the whole family. Three variants exist and share the same naming rule; they differ only in the base class they extend and in the categories they gain.",
+      "variants": [
+        "autonomous",
+        "form-associated",
+        "customized-built-in"
+      ]
+    }
+  ]
+}

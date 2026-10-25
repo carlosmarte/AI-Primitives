@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.slot",
+  "kind": "element",
+  "name": "slot",
+  "tag": "<slot>",
+  "title": "slot — Shadow tree slot",
+  "description": "Shadow tree slot",
+  "group": {
+    "id": "scripting",
+    "title": "Scripting & components"
+  },
+  "dom": {
+    "interface": "HTMLSlotElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [
+      "Flow",
+      "Phrasing"
+    ],
+    "conditional": {},
+    "all": [
+      "Flow",
+      "Phrasing"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "normal",
+    "start_tag": "required",
+    "end_tag": "required",
+    "self_closing_start_tag_allowed": false,
+    "children": "normal",
+    "children_note": "Child content is governed by the element’s content model in its spec definition."
+  },
+  "placement": {
+    "parent_requirement": null,
+    "parents": [],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [],
+  "flags": [],
+  "main_primitive": {
+    "slug": "slot",
+    "is_main": true,
+    "elements": [
+      "slot"
+    ],
+    "job": "code",
+    "why": "Insertion point in a shadow tree.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<template id=\"card\">\n  <h2><slot name=\"title\">Default title</slot></h2>\n</template>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Flow": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}

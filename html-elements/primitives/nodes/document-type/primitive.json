@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "dom.node.document-type",
+  "kind": "node",
+  "name": "DocumentType",
+  "slug": "document-type",
+  "title": "DocumentType — nodeType 10",
+  "description": "Document type declaration node.",
+  "dom": {
+    "interface": "DocumentType",
+    "nodeType": 10,
+    "node_type_constant": "Node.DOCUMENT_TYPE_NODE",
+    "applies_to": "HTML and XML"
+  },
+  "content_categories": null,
+  "placement": {
+    "parent": "Document (at most one, before the root element)"
+  },
+  "serialization": {
+    "text_html": "Serialized as <!DOCTYPE name>. In text/html the conforming form is <!DOCTYPE html>."
+  },
+  "creation": "document.implementation.createDocumentType(\"html\", \"\", \"\")",
+  "notes": [
+    {
+      "note": "The <!DOCTYPE html> node.",
+      "source": "SPEC.md (enriched taxonomy dom_node_types)"
+    }
+  ],
+  "example": "<!DOCTYPE html>",
+  "spec": {
+    "node": "https://dom.spec.whatwg.org/#interface-node",
+    "dom_node_types": "https://dom.spec.whatwg.org/#node"
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "dom.interface",
+      "dom.nodeType",
+      "dom.applies_to",
+      "description",
+      "notes"
+    ],
+    "authored": [
+      "slug",
+      "dom.node_type_constant",
+      "content_categories",
+      "placement",
+      "serialization",
+      "creation",
+      "example"
+    ]
+  }
+}

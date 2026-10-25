@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/carlosmarte/AI-Primitives/html-elements/schema/primitive.schema.json",
+  "title": "HTML AI Primitive",
+  "description": "One primitive per HTML element and per DOM node type, plus a single custom-element primitive whose variants cover autonomous, form-associated, and customized built-in custom elements. Generated from html-elements/SPEC.md by scripts/generate-primitives.mjs.",
+  "type": "object",
+  "required": ["$schema", "id", "kind", "name", "title", "description", "dom", "example", "spec", "provenance"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": { "type": "string", "pattern": "^(html\\.element\\.[a-z0-9]+|dom\\.node\\.[a-z-]+|html\\.custom-element)$" },
+    "kind": { "enum": ["element", "node", "custom-element"] },
+    "name": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "example": { "type": "string", "minLength": 1 },
+    "spec": { "type": "object" },
+    "provenance": {
+      "type": "object",
+      "required": ["spec_file", "standard", "standard_last_updated", "retrieved_on", "derived_from_spec", "authored"],
+      "properties": {
+        "spec_file": { "const": "html-elements/SPEC.md" },
+        "standard": { "type": "string" },
+        "standard_last_updated": { "type": "string", "format": "date" },
+        "retrieved_on": { "type": "string", "format": "date" },
+        "derived_from_spec": { "type": "array", "items": { "type": "string" } },
+        "authored": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/$defs/element" },
+    { "$ref": "#/$defs/node" },
+    { "$ref": "#/$defs/customElement" }
+  ],
+  "$defs": {
+    "contentCategory": {
+      "enum": ["Metadata", "Flow", "Sectioning", "Heading", "Phrasing", "Embedded", "Interactive", "Palpable", "Script-supporting"]
+    },
+    "formCategory": {
+      "enum": ["listed", "submittable", "resettable", "autocapitalize-and-autocorrect-inheriting", "labelable"]
+    },
+    "syntaxKind": {
+      "enum": ["void", "template", "raw text", "escapable raw text", "foreign", "normal"]
+    },
+    "tagRule": { "enum": ["required", "optional", "forbidden"] },
+    "syntax": {
+      "type": "object",
+      "required": ["kind", "start_tag", "end_tag", "self_closing_start_tag_allowed", "children", "children_note"],
+      "properties": {
+        "kind": { "$ref": "#/$defs/syntaxKind" },
+        "start_tag": { "enum": ["required", "optional"] },
+        "end_tag": { "$ref": "#/$defs/tagRule" },
+        "self_closing_start_tag_allowed": { "type": "boolean" },
+        "children": { "enum": ["none", "normal", "raw-text", "escapable-raw-text", "template-contents", "foreign"] },
+        "children_note": { "type": "string" }
+      },
+      "allOf": [
+        { "if": { "properties": { "kind": { "const": "void" } } }, "then": { "properties": { "end_tag": { "const": "forbidden" }, "children": { "const": "none" } } } },
+        { "if": { "properties": { "kind": { "const": "raw text" } } }, "then": { "properties": { "children": { "const": "raw-text" } } } },
+        { "if": { "properties": { "kind": { "const": "escapable raw text" } } }, "then": { "properties": { "children": { "const": "escapable-raw-text" } } } },
+        { "if": { "properties": { "kind": { "const": "template" } } }, "then": { "properties": { "children": { "const": "template-contents" } } } },
+        { "if": { "properties": { "kind": { "const": "foreign" } } }, "then": { "properties": { "children": { "const": "foreign" } } } }
+      ]
+    },
+    "element": {
+      "type": "object",
+      "required": ["tag", "group", "content_categories", "form_categories", "syntax", "placement", "classification_notes", "flags"],
+      "properties": {
+        "kind": { "const": "element" },
+        "name": { "type": "string", "pattern": "^[a-z][a-z0-9]*$" },
+        "tag": { "type": "string", "pattern": "^<[a-z][a-z0-9]*>$" },
+        "group": {
+          "type": "object",
+          "required": ["id", "title"],
+          "properties": { "id": { "type": "string" }, "title": { "type": "string" } }
+        },
+        "dom": {
+          "type": "object",
+          "required": ["interface", "node_type", "nodeType", "namespace"],
+          "properties": {
+            "interface": { "type": "string", "pattern": "^(HTML[A-Za-z]*Element|SVGSVGElement|Element)$" },
+            "node_type": { "const": "Element" },
+            "nodeType": { "const": 1 },
+            "namespace": { "enum": ["http://www.w3.org/1999/xhtml", "http://www.w3.org/2000/svg", "http://www.w3.org/1998/Math/MathML"] }
+          }
+        },
+        "content_categories": {
+          "type": "object",
+          "required": ["always", "conditional", "all", "context_restricted"],
+          "properties": {
+            "always": { "type": "array", "items": { "$ref": "#/$defs/contentCategory" }, "uniqueItems": true },
+            "conditional": { "type": "object", "additionalProperties": { "type": "string" }, "propertyNames": { "$ref": "#/$defs/contentCategory" } },
+            "all": { "type": "array", "items": { "$ref": "#/$defs/contentCategory" }, "uniqueItems": true },
+            "context_restricted": { "type": "boolean" }
+          }
+        },
+        "form_categories": {
+          "type": "object",
+          "required": ["form_associated", "always", "conditional", "all"],
+          "properties": {
+            "form_associated": { "type": "boolean" },
+            "always": { "type": "array", "items": { "$ref": "#/$defs/formCategory" }, "uniqueItems": true },
+            "conditional": { "type": "object", "additionalProperties": { "type": "string" }, "propertyNames": { "$ref": "#/$defs/formCategory" } },
+            "all": { "type": "array", "items": { "$ref": "#/$defs/formCategory" }, "uniqueItems": true }
+          }
+        },
+        "syntax": { "$ref": "#/$defs/syntax" },
+        "placement": {
+          "type": "object",
+          "required": ["parent_requirement", "parents", "note"],
+          "properties": {
+            "parent_requirement": { "type": ["string", "null"] },
+            "parents": { "type": "array", "items": { "type": "string" } },
+            "note": { "type": "string" }
+          }
+        },
+        "classification_notes": { "type": "array", "items": { "type": "object", "required": ["note", "source"] } },
+        "flags": { "type": "array", "items": { "type": "object", "required": ["issue", "resolution", "source"] } },
+        "spec": {
+          "type": "object",
+          "required": ["element", "syntax", "optional_tags", "categories"],
+          "properties": {
+            "element": { "type": ["string", "null"], "format": "uri" },
+            "syntax": { "type": "string", "format": "uri" },
+            "optional_tags": { "type": ["string", "null"], "format": "uri" },
+            "categories": { "type": "object", "additionalProperties": { "type": ["string", "null"], "format": "uri" } }
+          }
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "required": ["slug", "placement", "serialization", "creation", "notes"],
+      "properties": {
+        "kind": { "const": "node" },
+        "name": { "enum": ["Document", "DocumentType", "Element", "Attr", "Text", "Comment", "DocumentFragment", "CDATASection", "ProcessingInstruction"] },
+        "slug": { "type": "string", "pattern": "^[a-z-]+$" },
+        "dom": {
+          "type": "object",
+          "required": ["interface", "nodeType", "node_type_constant", "applies_to"],
+          "properties": {
+            "interface": { "type": "string" },
+            "nodeType": { "enum": [1, 2, 3, 4, 7, 8, 9, 10, 11] },
+            "node_type_constant": { "type": "string", "pattern": "^Node\\.[A-Z_]+_NODE$" },
+            "applies_to": { "type": "string" }
+          }
+        },
+        "content_categories": { "type": ["string", "null"] },
+        "placement": { "type": "object", "required": ["parent"], "properties": { "parent": { "type": ["string", "null"] } } },
+        "serialization": { "type": "object", "required": ["text_html"], "properties": { "text_html": { "type": "string" } } },
+        "creation": { "type": "string" },
+        "notes": { "type": "array", "items": { "type": "object", "required": ["note", "source"] } },
+        "spec": { "type": "object", "required": ["node", "dom_node_types"] }
+      }
+    },
+    "customElement": {
+      "type": "object",
+      "required": ["tag", "naming", "content_categories", "form_categories", "syntax", "placement", "variants"],
+      "properties": {
+        "kind": { "const": "custom-element" },
+        "id": { "const": "html.custom-element" },
+        "tag": { "type": "string" },
+        "dom": {
+          "type": "object",
+          "required": ["interface", "node_type", "nodeType", "namespace"],
+          "properties": { "node_type": { "const": "Element" }, "nodeType": { "const": 1 } }
+        },
+        "naming": { "type": "object", "required": ["rule", "spec", "registration"] },
+        "content_categories": { "type": "object", "required": ["always", "conditional", "all", "context_restricted"] },
+        "form_categories": { "type": "object", "required": ["form_associated", "always", "conditional", "all"] },
+        "syntax": { "type": "object", "required": ["kind"] },
+        "placement": { "type": "object", "required": ["note"] },
+        "variants": {
+          "type": "object",
+          "required": ["autonomous", "form-associated", "customized-built-in"],
+          "additionalProperties": false,
+          "properties": {
+            "autonomous": { "$ref": "#/$defs/customElementVariant" },
+            "form-associated": { "$ref": "#/$defs/customElementVariant" },
+            "customized-built-in": { "$ref": "#/$defs/customElementVariant" }
+          }
+        },
+        "spec": { "type": "object", "required": ["family", "naming"] }
+      }
+    },
+    "customElementVariant": {
+      "type": "object",
+      "required": ["title", "description", "interface", "content_categories", "form_categories", "form_associated", "syntax", "example", "spec"],
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "interface": { "type": "string" },
+        "content_categories": { "oneOf": [{ "type": "array", "items": { "$ref": "#/$defs/contentCategory" } }, { "type": "string" }] },
+        "form_categories": { "oneOf": [{ "type": "array", "items": { "$ref": "#/$defs/formCategory" } }, { "type": "string" }] },
+        "form_associated": { "type": ["boolean", "string"] },
+        "syntax": { "oneOf": [{ "$ref": "#/$defs/syntaxKind" }, { "type": "string" }] },
+        "note": { "type": "string" },
+        "example": { "type": "string" },
+        "spec": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

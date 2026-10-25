@@ -1,0 +1,117 @@
+{
+  "$schema": "../../../schema/primitive.schema.json",
+  "id": "html.element.a",
+  "kind": "element",
+  "name": "a",
+  "tag": "<a>",
+  "title": "a — Hyperlink",
+  "description": "Hyperlink",
+  "group": {
+    "id": "text-level",
+    "title": "Text-level semantics"
+  },
+  "dom": {
+    "interface": "HTMLAnchorElement",
+    "node_type": "Element",
+    "nodeType": 1,
+    "namespace": "http://www.w3.org/1999/xhtml"
+  },
+  "content_categories": {
+    "always": [
+      "Flow",
+      "Phrasing",
+      "Palpable"
+    ],
+    "conditional": {
+      "Interactive": "the href attribute is present"
+    },
+    "all": [
+      "Flow",
+      "Phrasing",
+      "Interactive",
+      "Palpable"
+    ],
+    "context_restricted": false
+  },
+  "form_categories": {
+    "form_associated": false,
+    "always": [],
+    "conditional": {},
+    "all": []
+  },
+  "syntax": {
+    "kind": "normal",
+    "start_tag": "required",
+    "end_tag": "required",
+    "self_closing_start_tag_allowed": false,
+    "children": "normal",
+    "children_note": "Child content is governed by the element’s content model in its spec definition."
+  },
+  "placement": {
+    "parent_requirement": null,
+    "parents": [],
+    "note": "Records named-parent/ancestor requirements relevant here; null is not permission to place the element anywhere. All element content models, transparent models, template contexts, and other conformance restrictions still apply. This taxonomy is not a full nesting validator."
+  },
+  "classification_notes": [
+    {
+      "note": "Transparent content model: counts as phrasing only when its contents are phrasing.",
+      "source": "SPEC.md (enriched taxonomy notes)"
+    }
+  ],
+  "flags": [
+    {
+      "issue": "Element index marks phrasing with '*' (transparent content model: phrasing only when their contents are phrasing). Definitions list Phrasing unconditionally.",
+      "resolution": "Classified as Phrasing; noted under 'notes'.",
+      "source": "SPEC.md (enriched taxonomy flags)"
+    }
+  ],
+  "main_primitive": {
+    "slug": "a",
+    "is_main": true,
+    "elements": [
+      "a"
+    ],
+    "job": "navigation",
+    "why": "Hyperlink.",
+    "see": "MAIN-ELEMENTS.md"
+  },
+  "example": "<a href=\"/docs\">Documentation</a>",
+  "spec": {
+    "element": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element",
+    "syntax": "https://html.spec.whatwg.org/multipage/syntax.html#elements-2",
+    "optional_tags": null,
+    "categories": {
+      "Flow": "https://html.spec.whatwg.org/multipage/dom.html#flow-content",
+      "Phrasing": "https://html.spec.whatwg.org/multipage/dom.html#phrasing-content",
+      "Interactive": "https://html.spec.whatwg.org/multipage/dom.html#interactive-content",
+      "Palpable": "https://html.spec.whatwg.org/multipage/dom.html#palpable-content"
+    }
+  },
+  "provenance": {
+    "spec_file": "html-elements/SPEC.md",
+    "standard": "WHATWG HTML Living Standard",
+    "standard_last_updated": "2026-10-22",
+    "retrieved_on": "2026-10-24",
+    "derived_from_spec": [
+      "description",
+      "dom.interface",
+      "content_categories",
+      "form_categories",
+      "syntax.kind",
+      "placement",
+      "classification_notes",
+      "flags",
+      "spec"
+    ],
+    "authored": [
+      "example",
+      "group",
+      "main_primitive",
+      "syntax.start_tag",
+      "syntax.end_tag",
+      "syntax.self_closing_start_tag_allowed",
+      "syntax.children",
+      "dom.namespace"
+    ]
+  }
+}
